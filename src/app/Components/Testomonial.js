@@ -6,17 +6,20 @@ import 'swiper/css';
 import 'swiper/css/navigation'; 
 import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
+import { useTranslation } from "../Context/TranslationContext.";
 const Testomonial = ()=>{
+      const { translate, setLanguage, language } = useTranslation();
+  
     const ImagesForTestimonial = ['star (1).png','star (1).png','star (1).png','star (1).png','star-half-filled (1).png']
 
    return( <>
       <div className="flex flex-col items-center justify-center md:grid mt-6 md:grid-cols-2">
       
       <div className="flex w-full md:border-[#ff3700] md:border-r bg-[#F9F7F7] h-64 flex-col justify-center items-center">
-         <h1 className="font-semibold mt-6  md:mt-0 text-2xl lg:text-3xl xl:text-4xl xl:mr-5 text-black text-center md:self-end w-full lg:w-[100%] xl:w-3/4">Lets Hear What <span className="font-extrabold text-[#ff3700]"> People </span> Have </h1>
-         <h1 className=" font-semibold  md:mr-5 text-2xl  lg:text-3xl xl:text-4xl text-black text-center mt-2 self-center xl:self-end  xl:w-3/4">To Say About Us</h1>
+         <h1 className="font-semibold mt-6  md:mt-0 text-2xl lg:text-3xl xl:text-4xl xl:mr-5 text-black text-center md:self-end w-full lg:w-[100%] xl:w-3/4">{translate('lets_hear_what')}<span className="font-extrabold text-[#ff3700]"> {translate('people')} </span> {translate('have')} </h1>
+         <h1 className=" font-semibold  md:mr-5 text-2xl  lg:text-3xl xl:text-4xl text-black text-center mt-2 self-center xl:self-end  xl:w-3/4">{translate('to_say_about_us')}</h1>
       <h1 className="xl:mt-8 text-black text-center mt-4 px-4 sm:px-4  text-sm sm:text-sm md:px-2 font-medium md:text-sm lg:text-base xl:text-lg  xl:ml-16">
-        All Are Our Bussniess And Users Are Happy With Us We Are Not Saying It Reviews Do
+         {translate('all_are_our_bussniess_and_users_are_happy_with_us_we_are_not_saying_it_reviews_do')}
       </h1>
       </div>
       
@@ -32,7 +35,7 @@ const Testomonial = ()=>{
             })
           }
         </div>
-        <h1 className="text-2xl text-black  font-bold">Average Customer Rating</h1>
+        <h1 className="text-2xl text-black  font-bold">{translate('average_customer_rating')}</h1>
       </div>
     </div>          
        <Swiper

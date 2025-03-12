@@ -110,10 +110,11 @@
 import Footer from "../Components/Footer";
 import Navbar from "../Components/Navbar";
 import { useState } from "react";
+import { useTranslation } from "../Context/TranslationContext.";
 
 export default function Contactus() {
   const [activeQuestion, setActiveQuestion] = useState(null);
-
+    const { translate, setLanguage, language } = useTranslation();
   const toggleQuestion = (index) => {
     setActiveQuestion(activeQuestion === index ? null : index);
   };
@@ -147,11 +148,11 @@ export default function Contactus() {
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="w-full md:w-1/2 mb-12 md:mb-0 animate-fade-in-left">
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800">
-                Confused? Don't Worry, <br />
-                We've Got You <span className="text-orange-500 animate-pulse-soft">Covered!</span>
+                {translate('confused_dont_worry')} <br />
+                {translate("we've_got_you")} <span className="text-orange-500 animate-pulse-soft">{translate('covered')}</span>
               </h1>
               <p className="mt-4 text-gray-700 text-lg animate-fade-in" style={{ animationDelay: "0.3s" }}>
-                Reach out to us, and we'll get back to you as soon as possible.
+                {translate("reach_out_to_us,_and_we'll_get_back_to_you_as_soon_as_possible")}
               </p>
               <div className="flex items-center space-x-6 mt-8 animate-fade-in" style={{ animationDelay: "0.6s" }}>
                 <a href="#" className="transition transform hover:scale-110">
@@ -220,7 +221,7 @@ export default function Contactus() {
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-12 animate-fade-in">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800">
-            How Easy It Is To <span className="text-orange-500">Contact Us</span>
+            {translate('how_easy_it_is_to')} <span className="text-orange-500">{translate('contact_us')}</span>
           </h2>
         </div>
         
@@ -230,8 +231,8 @@ export default function Contactus() {
               1
             </div>
             <div>
-              <h3 className="text-xl text-black font-bold mb-2">Fill The Form</h3>
-              <p className="text-gray-600">Tell us what you need by completing the contact form with your details and message.</p>
+              <h3 className="text-xl text-black font-bold mb-2">{translate('fill_the_form')}</h3>
+              <p className="text-gray-600">{translate('fill_the_form_subheading')}</p>
             </div>
           </div>
           
@@ -240,8 +241,8 @@ export default function Contactus() {
               2
             </div>
             <div>
-              <h3 className="text-xl text-black font-bold mb-2">Review Submissions</h3>
-              <p className="text-gray-600">We will review your submission and connect you with our professional barbers.</p>
+              <h3 className="text-xl text-black font-bold mb-2">{translate('review_submission')}</h3>
+              <p className="text-gray-600">{translate('review_submission_subheading')}</p>
             </div>
           </div>
           
@@ -250,8 +251,8 @@ export default function Contactus() {
               3
             </div>
             <div>
-              <h3 className="text-xl text-black font-bold mb-2">Problem Solved</h3>
-              <p className="text-gray-600">Congratulations! Your problem is fixed and you're ready to enjoy our services.</p>
+              <h3 className="text-xl text-black font-bold mb-2">{translate('problem_solved')}</h3>
+              <p className="text-gray-600">{translate('problem_solved_subheading')}</p>
             </div>
           </div>
         </div>
@@ -262,10 +263,10 @@ export default function Contactus() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 animate-fade-in">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-800">
-              Frequently Asked <span className="text-orange-500">Questions</span>
+               {translate('frequently_asked')}  <span className="text-orange-500">Questions</span>
             </h2>
             <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
-              Find answers to common questions about our services and contact process.
+            {translate('frequently_asked_subheading')} 
             </p>
           </div>
           

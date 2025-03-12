@@ -6,6 +6,8 @@ import Favorites from "@/app/DashboardComponents/Favorites";
 import Messages from "@/app/DashboardComponents/Message";
 import Dashboard from "../page";
 import { useParams } from "next/navigation";
+import BarberProfile from "@/app/DashboardComponents/ProfileComponent";
+import CandidateView from "@/app/DashboardComponents/CvCandidateView";
 
 
 
@@ -13,7 +15,10 @@ const RenderDetails = (category)=>{
          switch(category){
             case'jobs':
             return <Jobs></Jobs>
-            
+            case"cv":
+            return <div className="px-12 py-12">
+                 <CandidateView></CandidateView>
+            </div>
             case 'notifications':
                 return <Notifications></Notifications>
             case'favorites':
@@ -21,7 +26,7 @@ const RenderDetails = (category)=>{
             case 'messages':
                 return <Messages></Messages>
             default :
-            return <Dashboard></Dashboard>    
+            return <BarberProfile></BarberProfile>    
          }
 }
 export default function DashboardCategory(){

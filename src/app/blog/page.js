@@ -40,9 +40,12 @@ import { motion } from "framer-motion";
 import Footer from "../Components/Footer";
 import { useRouter } from "next/navigation";
 import BlogPageSearchSectionSm from "../Components/BlogPageSearchSectionSm";
+import { useTranslation } from "../Context/TranslationContext.";
 
 export default function Blog() {
   const [isLoaded, setIsLoaded] = useState(false);
+      const { translate, setLanguage, language } = useTranslation();
+  
   const categories = ['Hair Care', 'Hair Trends', 'Style Tips', 'Grooming Essentials', 'Beard Care'];
   const router = useRouter()
 
@@ -100,10 +103,10 @@ export default function Blog() {
             className="text-center px-4 max-w-4xl"
           >
             <h1 className="text-white font-bold text-3xl md:text-5xl lg:text-6xl leading-tight">
-              Stay Sharp: Barbering Trends, Tips &
+              {translate('stay_sharp:_barbering_trends_tips_&')}
             </h1>
             <h1 className="text-white font-bold text-3xl md:text-5xl lg:text-6xl mt-2 md:mt-4 leading-tight">
-              Career Insights
+              {translate('career_insights')}
             </h1>
             <motion.div 
               initial={{ y: 20, opacity: 0 }}
@@ -137,7 +140,7 @@ export default function Blog() {
               className="flex items-center mb-8"
               variants={itemVariants}
             >
-              <h2 className="text-4xl font-bold text-neutral-900">Blog</h2>
+              <h2 className="text-4xl font-bold text-neutral-900">{translate('blog')}</h2>
               <motion.div 
                 initial={{ width: 0 }}
                 animate={{ width: "3rem" }}
@@ -184,7 +187,7 @@ export default function Blog() {
               >
                 <input
                   type="text"
-                  placeholder="Search articles..."
+                  placeholder={translate('search_articles')}
                   className="w-full bg-white border border-neutral-200 rounded-lg py-3 px-4 pr-12 focus:outline-none focus:ring-2 focus:ring-orange-500 transition-all"
                 />
                 <Search className="absolute right-4 top-1/2 transform -translate-y-1/2 text-neutral-400" size={20} />
@@ -197,7 +200,7 @@ export default function Blog() {
                 transition={{ duration: 0.6, delay: 0.7 }}
               >
                 <h3 className="text-xl font-bold px-6 py-4 border-b border-neutral-100">
-                  Categories
+                  {translate('categories')}
                 </h3>
                 
                 <div>
@@ -230,7 +233,7 @@ export default function Blog() {
                 transition={{ duration: 0.6, delay: 0.9 }}
               >
                 <h3 className="text-xl font-bold mb-4">Newsletter</h3>
-                <p className="text-neutral-300 text-sm mb-4">Subscribe to get the latest articles and trends delivered to your inbox.</p>
+                <p className="text-neutral-300 text-sm mb-4">{translate('newsletter')}</p>
                 <input
                   type="email"
                   placeholder="Your email address"

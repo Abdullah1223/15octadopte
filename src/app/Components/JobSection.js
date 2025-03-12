@@ -7,8 +7,9 @@ import 'swiper/css';
 import 'swiper/css/navigation'; 
 import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
+import { useTranslation } from "../Context/TranslationContext.";
 const JobSection = ({TrendingCategories})=>{
-
+    const { translate, setLanguage, language } = useTranslation();
 return(
      TrendingCategories.map((data,index)=>{
          
@@ -17,7 +18,7 @@ return(
             <div className="flex flex-col" >
             <div className={`flex ${index==0?'pt-24':'pt-3'} p-4 px-8  justify-between items-center`}>
              <h1 className="text-black animate-slide-in-left font-bold text-lg">{data.Categoryname}</h1>
-             <h1 className="text-black animate-slide-in-left font-bold text-lg">View all</h1>
+             <h1 className="text-black animate-slide-in-left font-bold text-lg">{translate('view_all')}</h1>
             </div>
             
              

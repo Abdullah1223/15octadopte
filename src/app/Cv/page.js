@@ -502,11 +502,13 @@ import {
 } from 'lucide-react';
 import Navbar from '../Components/Navbar';
 import Footer from '../Components/Footer';
+import { useTranslation } from '../Context/TranslationContext.';
 
 export default function CVTechApp() {
   const [activeTab, setActiveTab] = useState('employer');
   const [showFilters, setShowFilters] = useState(false);
   const [mobileMenu, setMobileMenu] = useState(false);
+      const { translate, setLanguage, language } = useTranslation();
   
   return (
     <div className="min-h-screen bg-gray-50">
@@ -526,7 +528,7 @@ export default function CVTechApp() {
                   }`}
                 >
                   <Briefcase className="mr-2 h-4 w-4" />
-                  For Employers
+                  {translate('for_employers')}
                 </button>
                 <button 
                   onClick={() => setActiveTab('candidate')}
@@ -537,7 +539,7 @@ export default function CVTechApp() {
                   }`}
                 >
                   <User className="mr-2 h-4 w-4" />
-                  For Candidates
+                  {translate('for_candidates')}
                 </button>
               </div>
             </div>
@@ -562,7 +564,9 @@ export default function CVTechApp() {
 
 // Employer View Component
 const EmployerView = ({ showFilters, setShowFilters }) => {
+
   // Sample candidate data
+  const { translate, setLanguage, language } = useTranslation();
   const candidates = [
     {
       id: 1,
@@ -606,7 +610,7 @@ const EmployerView = ({ showFilters, setShowFilters }) => {
     <div>
       <div className="pb-5 border-b border-gray-200 flex flex-col sm:flex-row sm:items-center sm:justify-between">
         <h2 className="text-xl font-bold leading-7 text-gray-900 sm:text-2xl lg:text-3xl">
-          CV Search & Filtering
+         {translate('cv_search_&_filtering')}
         </h2>
         <div className="mt-3 sm:mt-0 sm:ml-4">
           <button 
@@ -614,7 +618,7 @@ const EmployerView = ({ showFilters, setShowFilters }) => {
             className="inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-orange-600 hover:bg-orange-700 focus:outline-none"
           >
             <Star className="mr-2 h-4 w-4" />
-            Upgrade to Premium
+            {translate('upgrade_to_premium')}
           </button>
         </div>
       </div>
@@ -629,7 +633,7 @@ const EmployerView = ({ showFilters, setShowFilters }) => {
             <input
               type="text"
               className="focus:ring-indigo-500 focus:border-indigo-500 block w-full pl-10 sm:text-sm border-gray-300 rounded-md h-10"
-              placeholder="Search candidates by skills, job title, or keywords"
+              placeholder={translate('search_candidates_by_skills_job_title_or_keywords')}
             />
           </div>
           <button
@@ -647,7 +651,7 @@ const EmployerView = ({ showFilters, setShowFilters }) => {
           <div className="mt-4 p-4 bg-white shadow rounded-md">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               <div>
-                <label className="block text-sm font-medium text-gray-700">Location</label>
+                <label className="block text-sm font-medium text-gray-700">{translate('location')}</label>
                 <div className="mt-1 relative rounded-md shadow-sm">
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                     <MapPin className="h-4 w-4 text-gray-400" />
@@ -660,17 +664,17 @@ const EmployerView = ({ showFilters, setShowFilters }) => {
                 </div>
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700">Contract Type</label>
+                <label className="block text-sm font-medium text-gray-700">{translate('contract_type')}</label>
                 <select className="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md">
                   <option>Any Type</option>
-                  <option>Full-time</option>
-                  <option>Part-time</option>
-                  <option>Contract</option>
+                  <option>{translate('full_time')}</option>
+                  <option>{translate('part_time')}</option>
+                  <option>{translate('contract')}</option>
                   <option>Freelance</option>
                 </select>
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700">Salary Range</label>
+                <label className="block text-sm font-medium text-gray-700">{translate('salary_range')}</label>
                 <div className="mt-1 relative rounded-md shadow-sm">
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                     <DollarSign className="h-4 w-4 text-gray-400" />
@@ -683,7 +687,7 @@ const EmployerView = ({ showFilters, setShowFilters }) => {
                 </div>
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700">Experience Level</label>
+                <label className="block text-sm font-medium text-gray-700">{translate('experience_level')}</label>
                 <select className="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md">
                   <option>Any Experience</option>
                   <option>Entry Level (0-2 years)</option>
@@ -693,7 +697,7 @@ const EmployerView = ({ showFilters, setShowFilters }) => {
                 </select>
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700">Specialty</label>
+                <label className="block text-sm font-medium text-gray-700">{translate('speciality')}</label>
                 <select className="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md">
                 <option>Unisex hairdresser</option>
                   <option>Male hairdresser</option>
@@ -831,15 +835,16 @@ const EmployerView = ({ showFilters, setShowFilters }) => {
 // Candidate View Component
 const CandidateView = () => {
   const [activeTab, setActiveTab] = useState('upload');
-  
+  const { translate, setLanguage, language } = useTranslation();
+
   return (
     <div>
       <div className="pb-5 border-b border-gray-200">
         <h2 className="text-xl font-bold leading-7 text-gray-900 sm:text-2xl lg:text-3xl">
-          CV Management & Job Matching
+          {translate('cv_management_&_job_matching')}
         </h2>
         <p className="mt-2 max-w-4xl text-sm text-gray-500">
-          Upload your CV to find relevant job opportunities or create a new CV with our builder.
+          {translate('cv_management_subheading')}
         </p>
       </div>
 
@@ -853,9 +858,9 @@ const CandidateView = () => {
             value={activeTab}
             onChange={(e) => setActiveTab(e.target.value)}
           >
-            <option  value="upload">Upload CV</option>
-            <option value="builder">CV Builder</option>
-            <option value="matching">Job Matching</option>
+            <option  value="upload">{translate('upload_cv')}</option>
+            <option value="builder">{translate('cv_builder')}</option>
+            <option value="matching">{translate('job_matching')}</option>
           </select>
         </div>
         <div className="hidden sm:block">
@@ -870,7 +875,7 @@ const CandidateView = () => {
                 } whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm flex items-center`}
               >
                 <Upload className="mr-2 h-5 w-5" />
-                Upload CV
+                {translate('upload_cv')}
               </button>
               <button
                 onClick={() => setActiveTab('builder')}
@@ -881,7 +886,7 @@ const CandidateView = () => {
                 } whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm flex items-center`}
               >
                 <FileText className="mr-2 h-5 w-5" />
-                CV Builder
+                {translate('cv_builder')}
               </button>
               <button
                 onClick={() => setActiveTab('matching')}
@@ -892,7 +897,7 @@ const CandidateView = () => {
                 } whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm flex items-center`}
               >
                 <Briefcase className="mr-2 h-5 w-5" />
-                Job Matching
+                {translate('job_matching')}
               </button>
             </nav>
           </div>
@@ -904,9 +909,9 @@ const CandidateView = () => {
         {activeTab === 'upload' && (
           <div className="bg-white shadow sm:rounded-lg">
             <div className="px-4 py-5 sm:p-6">
-              <h3 className="text-lg leading-6 font-medium text-gray-900">CV Upload & Extraction</h3>
+              <h3 className="text-lg leading-6 font-medium text-gray-900">{translate('cv_upload_&_extraction')}</h3>
               <div className="mt-2 max-w-xl text-sm text-gray-500">
-                <p>Upload your CV and we'll automatically extract your skills, experience, and other details.</p>
+                <p>{translate('cv_upload_&_extraction_subheading')}</p>
               </div>
               <div className="mt-5">
                 <div className="max-w-lg flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-md">

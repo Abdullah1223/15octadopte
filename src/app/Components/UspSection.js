@@ -1,26 +1,28 @@
 
 import Image from "next/image";
+import { useTranslation } from "../Context/TranslationContext.";
 
 const UspSection = ()=>{
-    const ValueSection = [
+  const { translate, setLanguage, language } = useTranslation();
+  const ValueSection = [
         {
-        title:'Easy & Fast',
-        subheading:'Find or Post Job In Easy Three Steps',
+        title:translate('Usp_1'),
+        subheading:translate('Usp_1_subheading'),
         image:'/thunder.png'
         },
         {
-          title:'Local Oppourtunities',
+          title:translate('Usp_2'),
           subheading:'Discover jobs near you or hire talent in your area',
           image:'/location-pin.png'
         },
         {
-          title:'Verified',
-          subheading:'All Our Talent And Bussniess Are Verified',
+          title:translate('Usp_3'),
+          subheading:translate('Usp_3_subheading'),
           image:'/verify.png'
         },
         {
-          title:'Customer Support',
-          subheading:'We Are Always Ready To Help',
+          title:translate("Usp_4"),
+          subheading:translate("Usp_4_subheading"),
           image:'/24-7.png'
         },
         

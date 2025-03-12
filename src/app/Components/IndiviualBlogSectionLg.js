@@ -8,7 +8,10 @@ import "swiper/css/pagination";
 import { Pagination, Navigation } from "swiper/modules";
 import BlogSwiperSection from "./BlogSwiperSection";
 import { useRouter } from "next/navigation";
+import { useTranslation } from "../Context/TranslationContext.";
 const IndiviualBlogSectionLg = ({category})=>{
+            const { translate, setLanguage, language } = useTranslation();
+  
     const router = useRouter()
     const MockArrayPagenums=[1,2,3,4,5,6,7,8,9,10,11,12,13]
     const MockArray=['Hair Care','Hair Trends','Style Hairs']
@@ -44,7 +47,7 @@ const IndiviualBlogSectionLg = ({category})=>{
     <div className="hidden bg-[#EBEBEB] md:grid mt-4  md:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5">
       <div className="flex xl:col-span-3 md:col-span-2 2xl:col-span-4 flex-col">
         <h1 className="text-black md:px-0 lg:px-5 font-bold mt-8 text-4xl lg:text-5xl">
-          Blog/{category}
+          {translate('blog')}/{category}
         </h1>
 
         <div className="flex flex-col w-[100%] "> 
@@ -72,7 +75,7 @@ const IndiviualBlogSectionLg = ({category})=>{
         <div className="md:px-0  relative ">
           <input
             type="text"
-            placeholder="Search Articles"
+            placeholder={translate('search_articles')}
             className="mt-8 pr-10 shadow-md rounded-md placeholder:text-black  md:w-56 lg:w-72 outline-none px-4 bg-white h-10 "
           ></input>
           <Search

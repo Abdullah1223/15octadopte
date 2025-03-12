@@ -1,6 +1,9 @@
 import { motion } from "framer-motion";
+import { useTranslation } from "../Context/TranslationContext.";
 
 const NewsletterNew = ()=>{
+            const { translate, setLanguage, language } = useTranslation();
+  
     return (
         <motion.div 
                 className="mt-8 bg-neutral-800 text-white rounded-lg p-6"
@@ -9,7 +12,7 @@ const NewsletterNew = ()=>{
                 transition={{ duration: 0.6, delay: 0.9 }}
               >
                 <h3 className="text-xl font-bold mb-4">Newsletter</h3>
-                <p className="text-neutral-300 text-sm mb-4">Subscribe to get the latest articles and trends delivered to your inbox.</p>
+                <p className="text-neutral-300 text-sm mb-4">{translate('newsletter')}</p>
                 <input
                   type="email"
                   placeholder="Your email address"

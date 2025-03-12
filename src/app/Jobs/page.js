@@ -6,8 +6,10 @@ import JobCard from '../DashboardComponents/JobCard';
 import FeaturedJobCard from '../Components/FeaturedJobCard';
 import Navbar from '../Components/Navbar';
 import Footer from '../Components/Footer';
+import { useTranslation } from '../Context/TranslationContext.';
 
 export default function Jobs() {
+        const { translate, setLanguage, language } = useTranslation();
     
   const jobs = [
     {
@@ -219,8 +221,8 @@ export default function Jobs() {
         transition={{ duration: 0.5 }}
         className="mb-8"
       >
-        <h1 className="text-2xl md:text-4xl font-bold mb-2 text-gray-800 bg-gradient-to-r from-orange-500 to-amber-500 bg-clip-text text-transparent">Find Your Perfect Hairstylist Job</h1>
-        <p className="text-gray-600 mb-6">Discover exciting opportunities in top salons across France</p>
+        <h1 className="text-2xl md:text-4xl font-bold mb-2 text-gray-800 bg-gradient-to-r from-orange-500 to-amber-500 bg-clip-text text-transparent">{translate('find_your_perfect_hairstylist_job')}</h1>
+        <p className="text-gray-600 mb-6">{translate('find_your_perfect_hairstylist_job_subheading')}</p>
         
         <div className="flex flex-col md:flex-row gap-3">
           <div className="flex-1 relative">

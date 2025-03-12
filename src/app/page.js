@@ -20,17 +20,19 @@ import Testomonial from "./Components/Testomonial";
 import JobCardComponent from "./Components/JobCardComponent";
 import JobSection from "./Components/JobSection";
 import Footer from "./Components/Footer";
+import { useTranslation } from "./Context/TranslationContext.";
 
 export default function Home() {
+    const { translate, setLanguage, language } = useTranslation();
   const TrendingCategories=[
     {
-    Categoryname:'Unisex'
+    Categoryname:translate('unisex')
     },
     {
-      Categoryname:'Female Barber'
+      Categoryname:translate('female_barber')
     },
     {
-      Categoryname:'Male Only'
+      Categoryname:translate('male_only')
     },
 
 ]
@@ -42,7 +44,7 @@ export default function Home() {
      <UspSection></UspSection>
      <ValueSection></ValueSection>
      <div className="w-full h-[1px] bg-black"></div>
-     <h1 className="text-center pt-10 font-extrabold text-black text-4xl">Explore Jobs</h1> 
+     <h1 className="text-center pt-10 font-extrabold text-black text-4xl">{translate('explore_jobs')}</h1> 
    <JobSection TrendingCategories={TrendingCategories} ></JobSection>
    <div className="flex justify-center pb-5 items-center">
     <button className="bg-[#ff7300] text-white font-bold text-lg w-64 h-12">

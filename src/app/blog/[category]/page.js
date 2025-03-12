@@ -13,7 +13,9 @@ import BlogPageSearchSectionSm from "@/app/Components/BlogPageSearchSectionSm";
 import BlogCardSm from "@/app/Components/BlogCardSm";
 import BlogSwiperSection from "@/app/Components/BlogSwiperSection";
 import Footer from "@/app/Components/Footer";
+import { useTranslation } from "@/app/Context/TranslationContext.";
 export default function IndiviualBlog(){
+          const { translate, setLanguage, language } = useTranslation();
     const params = useParams()
     //console.log( params)
     const category = decodeURIComponent(params.category)
@@ -27,8 +29,8 @@ export default function IndiviualBlog(){
          <div className="w-full h-[15rem] md:aspect-[14/4] grid place-items-center bg-cover bg-center" style={{ backgroundImage: "url('/barber1 1.png')" }}>
     <div className="bg-black bg-opacity-20 w-full h-full grid place-items-center">
         <div className="flex flex-col items-center">
-            <h1 className="text-white text-lg sm:text-3xl md:text-4xl xl:text-5xl 2xl:text-8xl">Stay Sharp Barbering Trends, Tips &</h1>
-            <h1 className="text-white  text-lg sm:text-3xl md:text-4xl lg:text-3xl xl:text-5xl mt-3 2xl:text-8xl">Career Insights</h1>
+            <h1 className="text-white text-lg sm:text-3xl md:text-4xl xl:text-5xl 2xl:text-8xl">{translate('stay_sharp:_barbering_trends_tips_&')}</h1>
+            <h1 className="text-white  text-lg sm:text-3xl md:text-4xl lg:text-3xl xl:text-5xl mt-3 2xl:text-8xl">{translate('career_insights')}</h1>
         </div>
     </div>
 </div>
