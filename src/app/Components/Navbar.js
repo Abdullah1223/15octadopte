@@ -104,32 +104,34 @@ import Image from "next/image"
 import Link from "next/link"
 import { usePathname, useRouter } from "next/navigation";
 import { useState, useEffect } from 'react';
+import { useTranslation } from "../Context/TranslationContext.";
 
 const Navbar = () => {
   const router = useRouter()
   const pathname = usePathname()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isDashboardExpanded, setIsDashboardExpanded] = useState(false)
+    const { translate, setLanguage, language } = useTranslation();
 
   const NavItems = [
     {
-      text: 'Accuiel',
+      text: translate('home'),
       path: '/'
     },
     {
-      text: 'Offrres d\'emploi',
+      text: translate('job_offers'),
       path: '/Jobs'
     },
     {
-      text: 'CVthèque',
+      text: translate('cv_library'),
       path: '/Cv'
     },
     {
-      text: 'Conseils',
+      text: translate('advice'),
       path: '/blog'
     },
     {
-      text: 'À propos',
+      text: translate('about_us'),
       path: '/aboutus'
     },
   ]

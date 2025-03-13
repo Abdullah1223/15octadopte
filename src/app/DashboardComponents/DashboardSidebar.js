@@ -1,15 +1,19 @@
+'use client';
 import Link from 'next/link';
 import { Briefcase, FileText, Bookmark, MessageSquare, Bell, User, LogOut, LayoutDashboard } from 'lucide-react';
+import { useTranslation } from '../Context/TranslationContext.';
 
 export default function Sidebar(){
+      const { translate, setLanguage, language } = useTranslation();
+  
   const menuItems = [
-    { title: 'Dashboard', icon: <LayoutDashboard size={20} />, path: '/Dashboard' },
-    { title: 'Jobs For You', icon: <Briefcase size={20} />, path: '/Dashboard/jobs' },
-    { title: 'My Cv', icon: <FileText size={20} />, path: '/Dashboard/cv' },
-    { title: 'Favorite Jobs', icon: <Bookmark size={20} />, path: '/Dashboard/favorites' },
+    { title: translate('dashboard'), icon: <LayoutDashboard size={20} />, path: '/Dashboard' },
+    { title: translate('jobs_for_you'), icon: <Briefcase size={20} />, path: '/Dashboard/jobs' },
+    { title: translate('my_cv'), icon: <FileText size={20} />, path: '/Dashboard/cv' },
+    { title: translate('favorite_jobs'), icon: <Bookmark size={20} />, path: '/Dashboard/favorites' },
     { title: 'Messages', icon: <MessageSquare size={20} />, path: '/Dashboard/messages' },
     { title: 'Notifications', icon: <Bell size={20} />, path: '/Dashboard/notifications' },
-    { title: 'My Profile', icon: <User size={20} />, path: '/Dashboard/profile' },
+    { title: translate('my_profile'), icon: <User size={20} />, path: '/Dashboard/profile' },
   ];
 
   return (
@@ -18,7 +22,7 @@ export default function Sidebar(){
         <div className="flex items-center space-x-2">
           <LayoutDashboard size={24} className="text-gray-800" />
           <div>
-            <h1 className="text-xl font-bold text-gray-800">Dashboard</h1>
+            <h1 className="text-xl font-bold text-gray-800">{translate('dashboard')}</h1>
             <p className="text-xs text-gray-500">Candidate Manager System</p>
           </div>
         </div>

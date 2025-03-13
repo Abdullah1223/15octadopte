@@ -159,17 +159,21 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
+import { useTranslation } from "../Context/TranslationContext.";
 
 const HeroSection = () => {
+      const { translate, setLanguage, language } = useTranslation();
   const router = useRouter();
   const words = ["SEAMLESSLY!", "EFFORTLESSLY!", "EFFICIENTLY!", "INSTANTLY!", "PERFECTLY!"];
+  const frwords=['SANS EFFORT!', 'FACILEMENT!',"EFFICACEMENT!","INSTANTANÉMENT!","PARFAITEMENT!"]
   const [currentWord, setCurrentWord] = useState(0);
   const [currentText, setCurrentText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
   
   useEffect(() => {
     const typingSpeed = isDeleting ? 75 : 150;
-    const word = words[currentWord];
+    const wordArray = language === 'fr' ? frwords : words;
+    const word = wordArray[currentWord];
     
     const timer = setTimeout(() => {
       if (!isDeleting) {
@@ -221,7 +225,7 @@ const HeroSection = () => {
             className="mt-4 flex items-center md:mt-0 text-[#FF9300] gap-2"
           >
             <div className="h-[2px] w-24 md:w-28 lg:w-40 bg-[#FF9300]"></div>
-            <h1 className="items-center text-xs md:text-base lg:text-lg">500+ Trusted Companies & Users</h1>
+            <h1 className="items-center text-xs md:text-base lg:text-lg">{translate('500+_trusted_companies_&_users')}</h1>
           </motion.div>
           
           {/*this is start to sm heading seciton*/}
@@ -229,9 +233,9 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.5 }}
-            className="md:hidden md:mt-0 md:ml-0 text-black font-bold text-xl sm:text-3xl"
+            className={`md:hidden md:mt-0 md:ml-0 text-black font-bold ${language=='fr'?'text-lg':'text-xl'}  sm:text-3xl`}
           >
-            CONNECTING JOB SEEKERS
+           {translate('connecting_job_seekers_sm')}
           </motion.h1>
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
@@ -245,9 +249,9 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.5 }}
-            className="md:hidden text-center md:mt-0 md:ml-0 text-xl sm:text-3xl text-black font-bold"
+            className={`md:hidden text-center md:mt-0 md:ml-0 ${language=='fr'?'text-lg':"text-xl"}  sm:text-3xl text-black font-bold`}
           >
-            EMPLOYERS {" "}
+            {translate('employers_sm')} {" "}
             <motion.div className="inline-block relative">
               <motion.span className="text-[#ff7300] relative">
                 {currentText}
@@ -272,7 +276,7 @@ const HeroSection = () => {
               onClick={() => handleClick('Candidate')} 
               className="border-[2px] rounded-[4px] border-black w-32 h-10 text-xs sm:w-36 sm:h-10 sm:text-base text-black"
             >
-              I am a Candidate
+              {translate('i_am_a_candidate')}
             </motion.button>
             <motion.button 
               whileHover={{ scale: 1.05, boxShadow: "0px 5px 15px rgba(250, 73, 9, 0.3)" }}
@@ -280,7 +284,7 @@ const HeroSection = () => {
               onClick={() => handleClick('Employer')} 
               className="rounded-[4px] bg-[#FA4909] w-32 h-10 text-xs sm:w-36 sm:h-10 sm:text-base text-white"
             >
-              I am a Employer
+              {translate('i_am_a_employer')}
             </motion.button>
           </motion.div>
           
@@ -291,7 +295,7 @@ const HeroSection = () => {
             transition={{ delay: 0.2, duration: 0.5 }}
             className="hidden md:block md:text-3xl lg:text-4xl xl:text-5xl text-black font-bold"
           >
-            CONNECTING JOB
+            {translate('connecting_job')}
           </motion.h1>
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
@@ -331,7 +335,7 @@ const HeroSection = () => {
               onClick={() => handleClick('Candidate')} 
               className="border-[2px] rounded-[4px] border-black md:h-[47px] md:w-44 lg:w-44 lg:h-[50px]"
             >
-              I am a Candidate
+              {translate('i_am_a_candidate')}
             </motion.button>
             <motion.button 
               whileHover={{ scale: 1.05, boxShadow: "0px 5px 15px rgba(250, 73, 9, 0.3)" }}
@@ -339,7 +343,7 @@ const HeroSection = () => {
               onClick={() => handleClick('Employer')} 
               className="rounded-[4px] bg-[#FA4909] md:h-[47px] md:w-44 lg:w-44 lg:h-[50px] text-white"
             >
-              I am a Employer
+             {translate('i_am_a_employer')}
             </motion.button>
           </motion.div>
           <div className="h-6"></div>

@@ -103,14 +103,17 @@
 //     </Layout>
 //   );
 // }
-
+'use client';
 import React from 'react';
 import { LayoutDashboard } from 'lucide-react';
 import Layout from './Layout';
 import Navbar from '../Components/Navbar';
+import { useTranslation } from '../Context/TranslationContext.';
 
 // ProposalCard Component
 const ProposalCard = ({ proposal }) => {
+      const { translate, setLanguage, language } = useTranslation();
+  
   return (
     <div className="bg-white border border-gray-200 rounded-lg mb-6 overflow-hidden">
       <div className="p-4 flex flex-col sm:flex-row">
@@ -148,11 +151,13 @@ const ProposalCard = ({ proposal }) => {
 
 // Dashboard Page
 export default function Dashboard() {
+  const { translate, setLanguage, language } = useTranslation();
+
   // Dashboard stats
   const stats = [
-    { label: 'Proposal Sent', value: 8, color: 'text-gray-800' },
-    { label: 'Proposals Accepted', value: 3, color: 'text-green-500' },
-    { label: 'Proposal Rejected', value: 2, color: 'text-red-500' },
+    { label: translate('proposal_sent'), value: 8, color: 'text-gray-800' },
+    { label: translate('proposals_accepted'), value: 3, color: 'text-green-500' },
+    { label:  translate('proposals_rejected'), value: 2, color: 'text-red-500' },
   ];
 
   const proposalData = [
@@ -178,7 +183,7 @@ export default function Dashboard() {
         {/* Welcome section */}
         <div className="bg-white rounded-lg shadow p-4 md:p-6 mb-6">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <h1 className="text-xl md:text-2xl font-bold mb-4 md:mb-0">Welcome Back, Jhon</h1>
+            <h1 className="text-xl md:text-2xl font-bold mb-4 md:mb-0">{translate('welcome_back_jhon')}</h1>
             <div className="grid grid-cols-3 gap-4 w-full md:w-auto md:flex md:space-x-8">
               {stats.map((stat, index) => (
                 <div key={index} className="text-center">
@@ -192,7 +197,7 @@ export default function Dashboard() {
 
         {/* Proposals section */}
         <div className="mb-8">
-          <h2 className="text-lg md:text-xl font-bold mb-4">Your Proposals</h2>
+          <h2 className="text-lg md:text-xl font-bold mb-4">{translate('your_proposals')}</h2>
           {proposalData.map((proposal, index) => (
             <div key={index} className="mb-4">
               <ProposalCard proposal={proposal} />
