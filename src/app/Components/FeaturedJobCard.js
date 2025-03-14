@@ -2,10 +2,11 @@
 import { AlertCircle, Bookmark, Briefcase, ChevronDown, Clock, DollarSign, MapPin, Star } from "lucide-react";
 import { useState } from "react";
 import { motion, AnimatePresence } from 'framer-motion';
+import { useTranslation } from "../Context/TranslationContext.";
 
 const FeaturedJobCard = ({ job, index }) => {
     const [expanded, setExpanded] = useState(false);
-  
+          const { translate, setLanguage, language } = useTranslation();
     return (
       <motion.div 
         initial={{ opacity: 0, y: 20 }}
@@ -40,7 +41,7 @@ const FeaturedJobCard = ({ job, index }) => {
                 whileTap={{ scale: 0.95 }}
                 className="px-4 py-2 bg-gradient-to-r from-orange-500 to-amber-500 text-white rounded-lg hover:from-orange-600 hover:to-amber-600 transition-colors font-medium shadow-md"
               >
-                Apply Now
+                {translate('apply_now')}
               </motion.button>
             </div>
           </div>

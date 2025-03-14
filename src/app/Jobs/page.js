@@ -62,8 +62,8 @@ export default function Jobs() {
   const promotedJobs = [
     {
       id: 5,
-      title: 'Creative Director - Hair Salon',
-      company: 'Elite Beauty Group',
+      title: translate('Creative Director - Hair Salon'),
+      company: translate('Elite Beauty Group'),
       location: 'Paris, France',
       experience: '5+ Years',
       salary: '5000€',
@@ -72,7 +72,7 @@ export default function Jobs() {
       publishedDate: '3/1/25',
       promoted: true,
       promotionEnds: '3/15/25',
-      description: 'Exclusive opportunity to lead our award-winning creative team in Paris. Competitive salary with benefits and bonuses for the right candidate.'
+      description: translate('promoted_jobs_1_subheading')
     },
     {
       id: 6,
@@ -387,7 +387,7 @@ export default function Jobs() {
             <div className="bg-orange-100 p-2 rounded-lg mr-3">
               <Sparkles size={20} className="text-orange-500" />
             </div>
-            <h2 className="text-xl font-bold text-gray-800">Premium Opportunities</h2>
+            <h2 className="text-xl font-bold text-gray-800">{translate('premium_opportunities')}</h2>
           </div>
           
           <div className="space-y-5">
@@ -403,7 +403,7 @@ export default function Jobs() {
               whileHover={{ scale: 1.02 }}
               className="inline-flex items-center text-orange-500 text-sm font-medium hover:text-orange-600 transition-colors"
             >
-              Promote your job posting
+              {translate('promote_your_job_posting')}
               <ArrowRight size={16} className="ml-1" />
             </motion.button>
           </div>
@@ -421,7 +421,7 @@ export default function Jobs() {
           <div className="bg-orange-100 h-8 w-8 rounded-full flex items-center justify-center text-orange-500 font-medium">
             {filteredJobs.filter(job => !job.promoted).length}
           </div>
-          <span className="text-gray-600">Jobs found matching your criteria</span>
+          <span className="text-gray-600">{translate('jobs_found_matching_your_criteria')}</span>
         </div>
         <div className="text-sm text-gray-500">
           Updated today

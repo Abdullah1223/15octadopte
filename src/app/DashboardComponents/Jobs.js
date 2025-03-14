@@ -2,8 +2,10 @@ import { Filter } from 'lucide-react';
 import Layout from '../Dashboard/Layout';
 import SearchBar from './SearchBar';
 import JobCard from './JobCard';
+import { useTranslation } from '../Context/TranslationContext.';
 
  export default function Jobs() {
+        const { translate, setLanguage, language } = useTranslation();
   const jobs = [
     {
       title: 'Barber In Paris',
@@ -41,7 +43,7 @@ import JobCard from './JobCard';
     
       <div className="p-6">
         <div className="mb-6">
-          <h1 className="text-2xl font-bold mb-4">Find & Search Jobs</h1>
+          <h1 className="text-2xl font-bold mb-4">{translate('find_&_search_jobs')}</h1>
           <div className="flex gap-4">
             <div className="flex-1">
               <SearchBar placeholder="Search Jobs By Location,Skill,jobtitle" />

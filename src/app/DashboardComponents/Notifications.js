@@ -1,26 +1,28 @@
+import { useTranslation } from "../Context/TranslationContext.";
 import NotificationList from "./NotificationList";
 
  export default function Notifications() {
+          const { translate, setLanguage, language } = useTranslation();
   const notifications = [
     {
-      type: 'Job Proposal',
-      title: 'Job proposal for unisex has been accepted',
-      description: 'You job proposal has been accepted by shiekh solutions for unisex barber',
-      actionText: 'Click Here To See more',
+      type: translate('job_proposal'),
+      title: translate('Job proposal for unisex has been accepted'),
+      description: translate('You job proposal has been accepted by shiekh solutions for unisex barber'),
+      actionText:translate( 'Click Here To See more'),
       time: '24 feb 2025 at 9:30pm',
     },
     {
       type: 'Message',
-      title: 'Shiekh Solutions Has Sent You The Message',
-      description: 'Sheikh Solutions Has Sent You The Message',
-      actionText: 'Click Here To Reply Him',
+      title: translate('Shiekh Solutions Has Sent You The Message'),
+      description: translate('Sheikh Solutions Has Sent You The Message_2'),
+      actionText: translate('Click Here To Reply Him'),
       time: '24 feb 2025 at 9:30pm',
     },
     {
-      type: 'New Article',
-      title: 'New Article Is Published About Hair Style',
-      description: 'New Article Is Published By Shiekh Solutions About Hair Style',
-      actionText: 'Click Here To See',
+      type: translate('New Article'),
+      title: translate('New Article Is Published About Hair Style'),
+      description: translate('New Article Is Published By Shiekh Solutions About Hair Style'),
+      actionText: translate('Click Here To See more'),
       time: '24 feb 2025 at 9:30pm',
     },
   ];

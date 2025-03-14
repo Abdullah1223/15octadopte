@@ -68,8 +68,10 @@
 
 
 import { MapPin, Clock, DollarSign, Briefcase, Bookmark } from 'lucide-react';
+import { useTranslation } from '../Context/TranslationContext.';
 
 const JobCard = ({ job }) => {
+          const { translate, setLanguage, language } = useTranslation();
   return (
     <div className="border-b px-4 border-gray-200 py-6">
       {/* Header section - stack vertically on mobile */}
@@ -84,7 +86,7 @@ const JobCard = ({ job }) => {
             <span className="hidden sm:inline">Save</span>
           </button>
           <button className="px-4 py-1 bg-orange-100 text-orange-500 rounded hover:bg-orange-200 transition-colors">
-            View Job
+            {translate('views_jobs')}
           </button>
         </div>
       </div>

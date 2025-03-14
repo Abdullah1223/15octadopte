@@ -532,8 +532,10 @@ import {
   Calendar, Award, Download, Edit, Eye, Plus, Trash2,
   Heart, Star, MessageSquare, ChevronRight, FileText
 } from 'lucide-react';
+import { useTranslation } from '../Context/TranslationContext.';
 
 const ProfilePage = ({ userType = 'candidate' }) => {
+        const { translate, setLanguage, language } = useTranslation();
   // Sample data - in a real app this would come from your API/database
   const [userData, setUserData] = useState(
     userType === 'candidate' 
@@ -545,7 +547,7 @@ const ProfilePage = ({ userType = 'candidate' }) => {
           email: 'james.wilson@example.com',
           experience: '8 years',
           skills: ['Classic Cuts', 'Beard Styling', 'Hot Towel Shave', 'Hair Coloring', 'Fade Specialist'],
-          about: 'Passionate master barber with 8 years of experience specializing in classic cuts, fades, and beard styling. I believe in creating a relaxing experience for clients while delivering precise, personalized styles.',
+          about: translate('about_subheading'),
           education: [
             { id: 1, school: 'New York Barber Academy', degree: 'Master Barber License', year: '2015' },
             { id: 2, school: 'Style & Technique Workshop', degree: 'Advanced Certification', year: '2018' }
@@ -773,7 +775,7 @@ const ProfilePage = ({ userType = 'candidate' }) => {
             className="bg-white rounded-xl shadow-md p-6 mb-8"
             variants={itemVariants}
           >
-            <h2 className="text-xl font-bold text-gray-800 mb-4">About</h2>
+            <h2 className="text-xl font-bold text-gray-800 mb-4">{translate('About')}</h2>
             <p className="text-gray-600">{userData.about}</p>
           </motion.div>
 
@@ -1042,7 +1044,7 @@ const ProfilePage = ({ userType = 'candidate' }) => {
             className="bg-white rounded-xl shadow-md p-6"
             variants={itemVariants}
           >
-            <h2 className="text-xl font-bold text-gray-800 mb-4">Contact Information</h2>
+            <h2 className="text-xl font-bold text-gray-800 mb-4">{translate('Contact Information')}</h2>
             <div className="space-y-3">
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center flex-shrink-0">
