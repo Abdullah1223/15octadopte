@@ -138,16 +138,32 @@ const Navbar = () => {
 
   const DashboardSubOptions = [
     {
+      text: 'Dashboard',
+      path: '/Dashboard'
+    },
+    {
       text: 'Profile',
       path: '/Dashboard/profile'
     },
     {
-      text: 'Settings',
-      path: '/Dashboard/settings'
+      text: 'Messages',
+      path: '/Dashboard/messages'
     },
     {
-      text: 'Statistics',
-      path: '/Dashboard/statistics'
+      text: 'Notifications',
+      path: '/Dashboard/notifications'
+    },
+    {
+      text: 'Jobs For You',
+      path: '/Dashboard/jobs'
+    },
+    {
+      text: 'My Cv',
+      path: '/Dashboard/cv'
+    },
+    {
+      text: 'Favorites',
+      path: '/Dashboard/favorites'
     }
   ]
 
