@@ -43,7 +43,7 @@ import { useTranslation } from '../Context/TranslationContext.';
     
       <div className="p-6">
         <div className="mb-6">
-          <h1 className="text-2xl font-bold mb-4">{translate('find_&_search_jobs')}</h1>
+          <h1 className="text-2xl text-black font-bold mb-4">{translate('find_&_search_jobs')}</h1>
           <div className="flex gap-4">
             <div className="flex-1">
               <SearchBar placeholder="Search Jobs By Location,Skill,jobtitle" />

@@ -2,7 +2,7 @@ import MessageItem from "./MessageItem";
 
 const MessageList = ({ messages, onMessageClick, selectedMessageId }) => {
   return (
-    <div className="h-full overflow-y-auto">
+    <div className="h-full text-black overflow-y-auto">
       {messages?.map((message) => (
         <MessageItem 
           key={message.id} 

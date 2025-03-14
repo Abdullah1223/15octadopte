@@ -12,7 +12,7 @@ const NotificationItem = ({ notification }) => {
             {notification.type}
           </div>
           <div className="flex-1">
-            <h4 className="font-semibold mb-1">{notification.title}</h4>
+            <h4 className="font-semibold text-black mb-1">{notification.title}</h4>
             <p className="text-sm text-gray-600 mb-1">{notification.description}</p>
             <div className="flex justify-between items-center">
               <a href="#" className="text-orange-500 text-sm">{notification.actionText}</a>

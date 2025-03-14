@@ -55,7 +55,7 @@ export default function Favorites() {
           <div className="mb-8">
             <div className="flex justify-between items-center mb-4">
               <div>
-                <h2 className="text-2xl font-bold">{translate('Favorite Jobs')}</h2>
+                <h2 className="text-2xl text-black font-bold">{translate('Favorite Jobs')}</h2>
                 <p className="text-gray-500">{translate('All Your Favorites Jobs At One Place')}</p>
               </div>
               <div className="text-gray-700">
@@ -78,7 +78,7 @@ export default function Favorites() {
           </div>
   
           <div>
-            <h2 className="text-2xl font-bold mb-4">{translate('Jobs That You May Like')}</h2>
+            <h2 className="text-2xl text-black font-bold mb-4">{translate('Jobs That You May Like')}</h2>
             <p className="text-gray-500 mb-4">{translate('Personalized Jobs For You')}</p>
             <div className="bg-white rounded-lg shadow">
               {recommendedJobs.map((job, index) => (

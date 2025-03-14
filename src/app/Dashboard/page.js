@@ -123,7 +123,7 @@ const ProposalCard = ({ proposal }) => {
         <div className="flex-1">
           <div className="flex flex-col sm:flex-row justify-between items-start mb-2">
             <div>
-              <h3 className="text-lg font-semibold">{proposal.title}</h3>
+              <h3 className="text-lg text-black font-semibold">{proposal.title}</h3>
               <div className="flex items-center text-sm text-gray-500">
                 <span className="mr-1">📍</span>
                 <span>{proposal.location}</span>
@@ -182,7 +182,7 @@ export default function Dashboard() {
         {/* Welcome section */}
         <div className="bg-white rounded-lg shadow p-4 md:p-6 mb-6">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <h1 className="text-xl md:text-2xl font-bold mb-4 md:mb-0">{translate('welcome_back_jhon')}</h1>
+            <h1 className="text-xl text-black md:text-2xl font-bold mb-4 md:mb-0">{translate('welcome_back_jhon')}</h1>
             <div className="grid grid-cols-3 gap-4 w-full md:w-auto md:flex md:space-x-8">
               {stats.map((stat, index) => (
                 <div key={index} className="text-center">
@@ -196,7 +196,7 @@ export default function Dashboard() {
 
         {/* Proposals section */}
         <div className="mb-8">
-          <h2 className="text-lg md:text-xl font-bold mb-4">{translate('your_proposals')}</h2>
+          <h2 className="text-lg text-black md:text-xl font-bold mb-4">{translate('your_proposals')}</h2>
           {proposalData.map((proposal, index) => (
             <div key={index} className="mb-4">
               <ProposalCard proposal={proposal} />
