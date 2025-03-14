@@ -138,11 +138,11 @@ const Navbar = () => {
 
   const DashboardSubOptions = [
     {
-      text: 'Dashboard',
+      text: translate('dashboard'),
       path: '/Dashboard'
     },
     {
-      text: 'Profile',
+      text: translate('my_profile'),
       path: '/Dashboard/profile'
     },
     {
@@ -154,15 +154,15 @@ const Navbar = () => {
       path: '/Dashboard/notifications'
     },
     {
-      text: 'Jobs For You',
+      text: translate('jobs_for_you'),
       path: '/Dashboard/jobs'
     },
     {
-      text: 'My Cv',
+      text: translate('my_cv'), 
       path: '/Dashboard/cv'
     },
     {
-      text: 'Favorites',
+      text: translate('favorite_jobs'),
       path: '/Dashboard/favorites'
     }
   ]
@@ -202,12 +202,12 @@ const Navbar = () => {
         </div>
 
         <button onClick={() => { router.push('/login') }} className="bg-[#FF7300] hidden text-white hover:bg-[#FF9522] md:block lg:text-[18px] text-[12px] w-32 h-9 lg:w-52 lg:h-10 rounded-[5px]">
-          Get Hired
+          {translate('Get Hired')}
         </button>
 
         <div className="flex items-center gap-3 md:hidden">
           <button onClick={() => { router.push('/login') }} className="bg-[#FF7300] text-white hover:bg-[#FF9522] md:hidden lg:text-[20px] text-[12px] w-24 h-7 lg:w-64 lg:h-12 rounded-[5px]">
-            Get Hired
+            {translate('Get Hired')}
           </button>
           <button className="md:hidden menu-button" onClick={() => setIsMenuOpen(!isMenuOpen)}>
             <img src="/menu.png" className="w-6" alt="Menu"></img>

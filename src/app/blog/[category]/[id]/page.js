@@ -91,6 +91,8 @@
 
 // pages/index.js
 'use client';
+import { motion } from "framer-motion";
+
 import { useState } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
@@ -110,9 +112,11 @@ import NewsletterNew from '@/app/Components/Newsletternew';
 import Footer from '@/app/Components/Footer';
 import BlogPageSearchSectionSm from '@/app/Components/BlogPageSearchSectionSm';
 import { useRouter } from 'next/navigation';
+import { useTranslation } from '@/app/Context/TranslationContext.';
 
 export default function IndiviualArticle() {
   const [comment, setComment] = useState('');
+        const { translate, setLanguage, language } = useTranslation();
   const router = useRouter()
   const handleCommentChange = (e) => {
     setComment(e.target.value);
@@ -129,19 +133,50 @@ export default function IndiviualArticle() {
       <Navbar></Navbar>
 
 
-      <div
-        className="w-full h-[15rem] md:aspect-[14/4] grid place-items-center bg-cover bg-center"
-        style={{ backgroundImage: "url('/barber1 1.png')" }}
-      >
-        <div className="bg-black bg-opacity-20 w-full h-full grid place-items-center">
-          <div className="flex flex-col items-center">
-            <h1 className="text-white text-lg sm:text-3xl md:text-4xl xl:text-5xl 2xl:text-8xl">
-              Stay Sharp Barbering Trends, Tips &
+      <div className="w-full h-[20rem] md:h-[30rem] relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-black/30 z-10"></div>
+        <motion.div
+          initial={{ scale: 1.1, opacity: 0.8 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 1.5 }}
+          className="w-full h-full"
+        >
+          <Image 
+            src="/barber1 1.png" 
+            alt="Barbershop Hero" 
+            fill 
+            className="object-cover object-center"
+            priority 
+          />
+        </motion.div>
+        <div className="absolute inset-0 z-20 flex items-center justify-center">
+          <motion.div 
+            initial={{ y: 30, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+            className="text-center px-4 max-w-4xl"
+          >
+            <h1 className="text-white font-bold text-3xl md:text-5xl lg:text-6xl leading-tight">
+              {translate('stay_sharp:_barbering_trends_tips_&')}
             </h1>
-            <h1 className="text-white  text-lg sm:text-3xl md:text-4xl lg:text-3xl xl:text-5xl mt-3 2xl:text-8xl">
-              Career Insights
+            <h1 className="text-white font-bold text-3xl md:text-5xl lg:text-6xl mt-2 md:mt-4 leading-tight">
+              {translate('career_insights')}
             </h1>
-          </div>
+            <motion.div 
+              initial={{ y: 20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.6, delay: 1 }}
+              className="mt-6 md:mt-8"
+            >
+              <motion.button 
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-md text-lg font-medium transition-all duration-300"
+              >
+                Explore Articles
+              </motion.button>
+            </motion.div>
+          </motion.div>
         </div>
       </div>
 
@@ -154,7 +189,7 @@ export default function IndiviualArticle() {
         <BlogPageSearchSectionSm></BlogPageSearchSectionSm>
        </div>  
       <main className="p-4">
-        <h1 className="text-2xl font-semibold mb-6 text-center">Hair Care</h1>
+        <h1 className="text-2xl font-semibold mb-6 text-center">{translate('Hair Care')}</h1>
         
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
           {/* Sidebar */}
@@ -166,12 +201,12 @@ export default function IndiviualArticle() {
               </div>
               
               <div className=" mt-6">
-                <h3 className="font-medium mb-2">Category</h3>
+                <h3 className="font-medium mb-2">{translate('categories')}</h3>
                 <ul className="space-y-2">
-                  <li onClick={()=>{router.push('/blog/Hair Care')}} className="text-orange-500 font-medium">Hair Care</li>
-                  <li onClick={()=>{router.push('/blog/Barber Industry')}} className="text-gray-600 hover:text-gray-800 cursor-pointer">Barber Industry</li>
-                  <li onClick={()=>{router.push('/blog/Hairdressing Techniques')}} className="text-gray-600 hover:text-gray-800 cursor-pointer">Hairdressing Techniques</li>
-                  <li onClick={()=>{router.push('/blog/Trends')}}  className="text-gray-600 hover:text-gray-800 cursor-pointer">Trends</li>
+                  <li onClick={()=>{router.push('/blog/Hair Care')}} className="text-orange-500 font-medium">{translate('Hair Care')}</li>
+                  <li onClick={()=>{router.push('/blog/Barber Industry')}} className="text-gray-600 hover:text-gray-800 cursor-pointer">{translate('Grooming Essentials')}</li>
+                  <li onClick={()=>{router.push('/blog/Hairdressing Techniques')}} className="text-gray-600 hover:text-gray-800 cursor-pointer">{translate('Style Tips')}</li>
+                  <li onClick={()=>{router.push('/blog/Trends')}}  className="text-gray-600 hover:text-gray-800 cursor-pointer">{translate('Hair Trends')}</li>
                 </ul>
               </div>
             </div>
@@ -200,31 +235,31 @@ export default function IndiviualArticle() {
                     </div>
                   </div>
                   
-                  <h2 className="text-xl font-semibold mb-2">How to care for your hairs</h2>
+                  <h2 className="text-xl font-semibold mb-2">{translate('How To Care For Your Hair Like a Pro')}</h2>
                   <p className="text-sm text-gray-600 mb-4">By Shiksh Solutions</p>
                   
                   <div className="flex space-x-2 mb-6">
                     <button className="flex items-center text-xs border border-gray-200 rounded-full px-3 py-1.5">
                       <Bookmark className="h-3 w-3 mr-1" />
-                      Save To Favorites
+                      {translate('Save To Favorites')}
                     </button>
                     <button className="flex items-center text-xs border border-gray-200 rounded-full px-3 py-1.5">
                       <Share2 className="h-3 w-3 mr-1" />
-                      Share On Media
+                      {translate('Share On Media')}
                     </button>
                   </div>
                 </div>
                 
                 <div className="prose mb-6">
-                  <h3 className="text-lg font-semibold mb-2">Good Shampoo:</h3>
-                  <p className="text-sm text-gray-700 mb-4">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?"</p>
+                  <h3 className="text-lg font-semibold mb-2">{translate('Good Shampoo')}</h3>
+                  <p className="text-sm text-gray-700 mb-4">{translate('blog_id_subheading')}</p>
                   
-                  <h3 className="text-lg font-semibold mb-2">Frequent Baths</h3>
-                  <p className="text-sm text-gray-700 mb-4">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?"</p>
+                  <h3 className="text-lg font-semibold mb-2">{translate('Frequent Baths')}</h3>
+                  <p className="text-sm text-gray-700 mb-4">{translate('blog_id_subheading')}</p>
                 </div>
                 
                 <div className="border-t border-gray-100 pt-4">
-                  <p className="text-xs text-gray-400 mb-4">Published On: 2/28/24</p>
+                  <p className="text-xs text-gray-400 mb-4">{translate('Published On: 2/2/25')} 2/28/24</p>
                   
                   <div className="flex space-x-4 mb-6">
                     <button className="flex items-center text-gray-600">
@@ -265,7 +300,7 @@ export default function IndiviualArticle() {
                               <span className="text-xs font-normal text-gray-500 ml-2">6 hours ago</span>
                               <span className="text-xs text-gray-400 ml-2">partly friends</span>
                             </p>
-                            <p className="text-sm mt-1">Hey this guide about hair care was awesome I applied it and my hairs got thicker and smoother thanks to Adaptic Up Callifier that my hair is smooth now even with heat.</p>
+                            <p className="text-sm mt-1">{translate('comment_1')}</p>
                           </div>
                         </div>
                         
@@ -293,7 +328,7 @@ export default function IndiviualArticle() {
                                   <span className="text-xs font-normal text-gray-500 ml-1">1 day ago</span>
                                   <span className="text-xs text-gray-400 ml-1">partly friends</span>
                                 </p>
-                                <p className="text-xs mt-1">Yes! You are right this advice is 100% on spot bruh I was nothing so much hairfall but after going through this guide I don't have hairfall</p>
+                                <p className="text-xs mt-1">{translate('comment_2')}</p>
                               </div>
                             </div>
                           </div>
@@ -309,7 +344,7 @@ export default function IndiviualArticle() {
                                   <span className="text-xs font-normal text-gray-500 ml-1">1 day ago</span>
                                   <span className="text-xs text-gray-400 ml-1">partly friends</span>
                                 </p>
-                                <p className="text-xs mt-1">Yes! You are right this advice is 100% on spot bruh I was nothing so much hairfall but after going through this guide I don't have hairfall</p>
+                                <p className="text-xs mt-1">{translate('comment_2')}</p>
                               </div>
                             </div>
                           </div>
@@ -320,7 +355,7 @@ export default function IndiviualArticle() {
                             </div>
                             <input 
                               type="text" 
-                              placeholder="Add a comment" 
+                              placeholder={translate('Add a comment')}
                               className="flex-1 border border-gray-200 rounded-full px-3 py-1 text-xs"
                               value={comment}
                               onChange={handleCommentChange}
@@ -330,7 +365,7 @@ export default function IndiviualArticle() {
                             className="bg-orange-500 text-white text-xs px-4 py-1 rounded ml-auto block"
                             onClick={handleSubmit}
                           >
-                            Submit
+                            {translate('Submit')}
                           </button>
                         </div>
                       </div>
@@ -358,12 +393,12 @@ export default function IndiviualArticle() {
                   </div>
                   <div className="p-2 relative">
                     <div className="flex justify-between items-center mb-6">
-                      <span className="bg-orange-100 text-orange-500 text-xs px-1.5 py-0.5 rounded">Hair Care</span>
+                      <span className="bg-orange-100 text-orange-500 text-xs px-1.5 py-0.5 rounded">{translate('Hair Care')}</span>
                       <span className="text-xs text-gray-500 flex items-center">
                         <Eye className="h-3 w-3 mr-1" /> 3.4k
                       </span>
                     </div>
-                    <h4 className="text-sm font-medium">How to care for your hairs</h4>
+                    <h4 className="text-sm font-medium">{translate('How To Care For Your Hair Like a Pro')}</h4>
                   </div>
                 </div>
               ))}

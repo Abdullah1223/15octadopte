@@ -46,7 +46,7 @@ export default function Blog() {
   const [isLoaded, setIsLoaded] = useState(false);
       const { translate, setLanguage, language } = useTranslation();
   
-  const categories = ['Hair Care', 'Hair Trends', 'Style Tips', 'Grooming Essentials', 'Beard Care'];
+  const categories = [translate('Hair Care'), translate('Hair Trends'), translate('Style Tips'), translate('Grooming Essentials'), translate('Beard Care')];
   const router = useRouter()
 
   useEffect(() => {
@@ -265,6 +265,7 @@ export default function Blog() {
 
 const BlogCard = ({ featured = false }) => {
   const router = useRouter()
+  const { translate, setLanguage, language } = useTranslation();
 
   return (
     
@@ -295,13 +296,11 @@ const BlogCard = ({ featured = false }) => {
         </div>
         
         <h3 className="text-xl font-bold text-neutral-900 mb-3 group-hover:text-orange-500 transition-colors">
-          {featured ? 'Master the Art of Perfect Haircare: Expert Tips' : 'How To Care For Your Hair Like a Pro'}
+          {featured ? translate('Master the Art of Perfect Haircare: Expert Tips') : translate('How To Care For Your Hair Like a Pro')}
         </h3>
         
         <p className="text-neutral-600 text-sm mb-4 line-clamp-3">
-          Lorem ipsum is simply dummy text of the printing and typesetting industry. 
-          Lorem ipsum has been the industry's standard dummy text ever since the 1500s,
-          when an unknown printer took a galley of type.
+        {translate("Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum has been the industry's")}
         </p>
         
         <div className="flex items-center justify-between">
@@ -346,27 +345,28 @@ const BlogCard = ({ featured = false }) => {
 
 
 const BlogPageSectionSm = () => {
+  const { translate, setLanguage, language } = useTranslation();
   const articles = [
     {
       image: "/haircare.jpg",
       category: "Hair Care",
       date: "Feb 2, 2025",
-      title: "How To Style Your Hair",
-      excerpt: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's"
+      title: translate('How To Care For Your Hair Like a Pro'),
+      excerpt:translate("Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum has been the industry's")
     },
     {
       image: "/haircare.jpg",
       category: "Hair Trends",
       date: "Feb 5, 2025",
-      title: "2025 Trending Hairstyles",
-      excerpt: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's"
+      title: translate('How To Care For Your Hair Like a Pro'),
+      excerpt:translate("Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum has been the industry's")
     },
     {
       image: "/haircare.jpg",
       category: "Style Tips",
       date: "Feb 10, 2025",
-      title: "Perfect Fade Techniques",
-      excerpt: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's"
+      title: translate('How To Care For Your Hair Like a Pro'),
+      excerpt:translate("Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum has been the industry's")
     }
   ];
   

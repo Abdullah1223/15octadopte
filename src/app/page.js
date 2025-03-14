@@ -48,7 +48,7 @@ export default function Home() {
    <JobSection TrendingCategories={TrendingCategories} ></JobSection>
    <div className="flex justify-center pb-5 items-center">
     <button className="bg-[#ff7300] text-white font-bold text-lg w-64 h-12">
-       Explore All Jobs
+       {translate('Explore All Jobs')}
     </button>
    </div>
      <OurServicesComponentLg></OurServicesComponentLg>

@@ -8,7 +8,7 @@ import { useTranslation } from '../Context/TranslationContext.';
         const { translate, setLanguage, language } = useTranslation();
   const jobs = [
     {
-      title: 'Barber In Paris',
+      title: translate('Barber In Paris'),
       company: 'Shiekh Solutions',
       location: 'Paris, France',
       experience: '3 Years',
@@ -18,7 +18,7 @@ import { useTranslation } from '../Context/TranslationContext.';
       publishedDate: '2/2/25',
     },
     {
-      title: 'Barber In Paris',
+      title: translate('Barber In Paris') ,
       company: 'Shiekh Solutions',
       location: 'Paris, France',
       experience: '3 Years',
@@ -28,7 +28,7 @@ import { useTranslation } from '../Context/TranslationContext.';
       publishedDate: '2/2/25',
     },
     {
-      title: 'Barber In Paris',
+      title: translate('Barber In Paris'),
       company: 'Shiekh Solutions',
       location: 'Paris, France',
       experience: '3 Years',

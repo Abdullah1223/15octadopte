@@ -5,7 +5,7 @@ export default function Favorites() {
         const { translate, setLanguage, language } = useTranslation();
     const favoriteJobs = [
       {
-        title: 'Barber In Paris',
+        title: translate('Barber In Paris'),
         company: 'Shiekh Solutions',
         location: 'Paris, France',
         experience: '3 Years',
@@ -15,7 +15,7 @@ export default function Favorites() {
         publishedDate: '2/2/25',
       },
       {
-        title: 'Barber In Paris',
+        title: translate('Barber In Paris'),
         company: 'Shiekh Solutions',
         location: 'Paris, France',
         experience: '3 Years',
@@ -25,7 +25,7 @@ export default function Favorites() {
         publishedDate: '2/2/25',
       },
       {
-        title: 'Barber In Paris',
+        title: translate('Barber In Paris'),
         company: 'Shiekh Solutions',
         location: 'Paris, France',
         experience: '3 Years',
@@ -38,7 +38,7 @@ export default function Favorites() {
   
     const recommendedJobs = [
       {
-        title: 'Barber In Paris',
+        title: translate('Barber In Paris'),
         company: 'Shiekh Solutions',
         location: 'Paris, France',
         experience: '3 Years',

@@ -132,7 +132,7 @@ const JobCard = ({ job }) => {
       {/* Published date - maintain right alignment */}
       {job.publishedDate && (
         <div className="mt-2 text-right text-sm text-gray-500">
-          Published On: {job.publishedDate}
+          {translate('Published On: 2/2/25')} {job.publishedDate}
         </div>
       )}
     </div>

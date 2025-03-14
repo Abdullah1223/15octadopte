@@ -16,7 +16,7 @@ const ValueSection = ()=>{
        <h1 className="text-black text-lg sm:text-3xl md:text-4xl font-extrabold lg:text-2xl xl:text-4xl text-center">{translate("get_connected_to_top")}<span className="text-[#ff7300]">{translate('talent')}</span></h1>
       <h1 className="text-black text-lg sm:text-3xl md:text-4xl font-extrabold lg:text-2xl xl:text-4xl pt-3 text-center">{translate('or_leading')} <span className="text-[#ff7300]">{translate('businesses')}</span> {translate('in_the')}</h1>
       <h1 className="text-black text-lg sm:text-3xl md:text-4xl font-extrabold lg:text-2xl xl:text-4xl pt-3 text-center">{translate('barber_industry')}</h1>
-       <button className="hidden lg:block animate-slide-up shadow-xl shadow-slate-200 lg:mt-44 xl:mt-52 lg:w-48 xl:w-56 text-white  rounded-sm font-bold text-center h-12 bg-[#ff7300]">Sign Up For Free</button>
+       <button className={`hidden lg:block animate-slide-up shadow-xl shadow-slate-200 lg:mt-44 xl:mt-52 ${language=='fr'?"lg:w-64 xl:w-64":"lg:w-48 xl:w-56"}  text-white  rounded-sm font-bold text-center h-12 bg-[#ff7300]`}>{translate('Sign Up For Free')}</button>
       <div className=" h-8 md:h-12"></div>
        </div>
        
@@ -61,7 +61,7 @@ const ValueSection = ()=>{
         </div>
        </div>
       
-       <button className=" lg:hidden  mt-9 sm:mt-12 w-44 sm:w-64 mb-4 sm:text-lg text-sm text-white  rounded-sm font-bold text-center h-10 bg-[#ff7300]">Sign Up For Free</button>
+       <button className={` lg:hidden  mt-9 ${language=='fr'?"w-56 sm:w-72":"w-44 sm:w-64"} sm:mt-12  mb-4 sm:text-lg text-sm text-white  rounded-sm font-bold text-center h-10 bg-[#ff7300]`}>{translate('Sign Up For Free')}</button>
 
 
       </div> 

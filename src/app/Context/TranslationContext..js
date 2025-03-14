@@ -7,7 +7,7 @@ const TranslationContext = createContext();
 
 // Provider component
 export const TranslationProvider = ({ children }) => {
-  const [language, setLanguage] = useState("en");
+  const [language, setLanguage] = useState("fr");
 
   // Function to translate text based on the current language
   const translate = (key) => translations[language][key] || key;

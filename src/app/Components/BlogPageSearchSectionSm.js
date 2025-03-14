@@ -3,9 +3,11 @@ import { Menu, Scissors, Search } from "lucide-react";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import { useTranslation } from "../Context/TranslationContext.";
 
 const BlogPageSearchSectionSm = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+        const { translate, setLanguage, language } = useTranslation();
   const router = useRouter();
   return (
     <motion.div 
@@ -48,7 +50,7 @@ const BlogPageSearchSectionSm = () => {
         <div className="container mx-auto px-4 py-3">
           <h3 className="font-medium mb-2 text-white/70">Categories</h3>
           <div className="grid grid-cols-2 gap-2">
-            {['Hair Care', 'Hair Trends', 'Style Tips', 'Grooming', 'Beard Care'].map((category, i) => (
+            {[translate('Hair Care'), translate('Hair Trends'), translate('Style Tips'), translate('Grooming Essentials'), translate('Beard Care')].map((category, i) => (
               <motion.div 
                 onClick={()=>{router.push(`/blog/${category}`)}}
                 key={category} 
