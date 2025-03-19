@@ -13,8 +13,8 @@ const ValueSection = ()=>{
     
 <div className=" pt-8 md:pt-20 flex bg-[#F9F7F7] flex-col justify-center items-center lg:grid lg:grid-cols-2"> 
        <div className="flex justify-center items-center flex-col">
-       <h1 className="text-black text-lg sm:text-3xl md:text-4xl font-extrabold lg:text-2xl xl:text-4xl text-center">{translate("get_connected_to_top")}<span className="text-[#ff7300]">{translate('talent')}</span></h1>
-      <h1 className="text-black text-lg sm:text-3xl md:text-4xl font-extrabold lg:text-2xl xl:text-4xl pt-3 text-center">{translate('or_leading')} <span className="text-[#ff7300]">{translate('businesses')}</span> {translate('in_the')}</h1>
+       <h1 className="text-black text-lg sm:text-3xl md:text-4xl font-extrabold lg:text-2xl xl:text-4xl text-center">{translate("get_connected_to_top")}<span className="text-[#ff7300]">{translate('talent')}</span> {translate('or_leading')}</h1>
+      <h1 className="text-black text-lg sm:text-3xl md:text-4xl font-extrabold lg:text-2xl xl:text-4xl pt-3 text-center"><span className="text-[#ff7300]">{translate('businesses')}</span> {translate('in_the')}</h1>
       <h1 className="text-black text-lg sm:text-3xl md:text-4xl font-extrabold lg:text-2xl xl:text-4xl pt-3 text-center">{translate('barber_industry')}</h1>
        <button className={`hidden lg:block animate-slide-up shadow-xl shadow-slate-200 lg:mt-44 xl:mt-52 ${language=='fr'?"lg:w-64 xl:w-64":"lg:w-48 xl:w-56"}  text-white  rounded-sm font-bold text-center h-12 bg-[#ff7300]`}>{translate('Sign Up For Free')}</button>
       <div className=" h-8 md:h-12"></div>
