@@ -233,25 +233,26 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.5 }}
-            className={`md:hidden md:mt-0 md:ml-0 text-black font-bold ${language=='fr'?'text-lg':'text-xl'}  sm:text-3xl`}
+            className={`md:hidden text-center md:mt-0 md:ml-0 text-black font-bold ${language=='fr'?'text-lg':'text-xl'}  sm:text-3xl`}
           >
-           {translate('connecting_job_seekers_sm')}
+           {translate('our_mission_sm')}
           </motion.h1>
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3, duration: 0.5 }}
-            className="md:hidden text-center md:mt-0 md:ml-0 text-3xl text-black font-bold"
+            transition={{ delay: 0.2, duration: 0.5 }}
+            className={`text-center md:hidden md:mt-0 md:ml-0 text-black font-bold ${language=='fr'?'text-lg':'text-xl'}  sm:text-3xl`}
           >
-            &
+           {translate('connecting_job_seekers_sm')}
           </motion.h1>
+        
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.5 }}
             className={`md:hidden text-center md:mt-0 md:ml-0 ${language=='fr'?'text-lg':"text-xl"}  sm:text-3xl text-black font-bold`}
           >
-            {translate('employers_sm')} {" "}
+           
             <motion.div className="inline-block relative">
               <motion.span className="text-[#ff7300] relative">
                 {currentText}
@@ -295,6 +296,14 @@ const HeroSection = () => {
             transition={{ delay: 0.2, duration: 0.5 }}
             className="hidden md:block md:text-3xl lg:text-4xl xl:text-5xl text-black font-bold"
           >
+            {translate('our_mission')}
+          </motion.h1>
+          <motion.h1 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2, duration: 0.5 }}
+            className="hidden md:block md:text-3xl lg:text-4xl xl:text-5xl text-black font-bold"
+          >
             {translate('connecting_job')}
           </motion.h1>
           <motion.h1 
@@ -303,7 +312,7 @@ const HeroSection = () => {
             transition={{ delay: 0.3, duration: 0.5 }}
             className="hidden md:block md:text-3xl lg:text-4xl xl:text-5xl text-black font-bold"
           >
-            SEEKERS & EMPLOYERS
+            {translate("&_employers")}
           </motion.h1>
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}

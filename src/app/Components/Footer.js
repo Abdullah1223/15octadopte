@@ -25,7 +25,6 @@ const Footer = ()=>{
                           <li><a href="/" className="text-base text-white ">{translate('home')}</a></li>
                           <li><a href="/Jobs" className="text-base text-white ">{translate('job_offers')}</a></li>
                           <li><a href="/Cv" className="text-base text-white ">{translate('cv_library')}</a></li>
-                          <li><a href="/blog" className="text-base text-white ">{translate('advice')}</a></li>
                           <li><a href="/aboutus" className="text-base text-white ">{translate('about_us')}</a></li> 
                           <li><a href="/Contact-us" className="text-base text-white ">Contact & Support</a></li> 
                                                    
@@ -35,8 +34,6 @@ const Footer = ()=>{
                         <h3 className="text-sm font-semibold text-white tracking-wider uppercase">{translate("for_employers")}</h3>
                         <ul className="mt-4 space-y-4">
                           <li><a href="#" className="text-base text-white ">{translate('search_cv')}</a></li>
-                          <li><a href="#" className="text-base text-white ">{translate('Pricing')}</a></li>
-                          <li><a href="#" className="text-base text-white ">{translate('premium_access')}</a></li>
                         </ul>
                       </div>
                       <div>
