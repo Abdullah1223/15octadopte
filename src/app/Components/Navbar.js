@@ -105,6 +105,7 @@ import Link from "next/link"
 import { usePathname, useRouter } from "next/navigation";
 import { useState, useEffect } from 'react';
 import { useTranslation } from "../Context/TranslationContext.";
+import { LogIn } from "lucide-react";
 
 const Navbar = () => {
   const router = useRouter()
@@ -126,10 +127,7 @@ const Navbar = () => {
       text: translate('cv_library'),
       path: '/Cv'
     },
-    {
-      text: translate('advice'),
-      path: '/blog'
-    },
+  
     {
       text: translate('about_us'),
       path: '/aboutus'
@@ -206,13 +204,18 @@ const Navbar = () => {
         </button>
 
         <div className="flex items-center gap-3 md:hidden">
-          <button onClick={() => { router.push('/login') }} className="bg-[#FF7300] text-white hover:bg-[#FF9522] md:hidden lg:text-[20px] text-[12px] w-24 h-7 lg:w-64 lg:h-12 rounded-[5px]">
-            {translate('Get Hired')}
-          </button>
-          <button className="md:hidden menu-button" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-            <img src="/menu.png" className="w-6" alt="Menu"></img>
-          </button>
-        </div>
+  <button 
+    onClick={() => { router.push('/login') }} 
+    className="bg-[#FF7300] text-white hover:bg-[#FF9522] md:hidden flex items-center justify-center gap-1 w-[7rem] h-7 lg:px-6 lg:py-3 rounded-[5px]"
+  >
+   
+    <span className="text-xs lg:text-lg">{translate('Get Hired')}</span>
+    <LogIn className="w-4 h-4 lg:w-5 lg:h-5" />
+  </button>
+  <button className="md:hidden menu-button" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+    <img src="/menu.png" className="w-6" alt="Menu"></img>
+  </button>
+</div>
       </div>
 
       {/* Slide menu from left */}

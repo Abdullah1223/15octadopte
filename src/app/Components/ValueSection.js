@@ -25,7 +25,7 @@ const ValueSection = ()=>{
        ref={ref} className="flex lg:pt-7   lg:ml-9 xl:pt-16 xl:ml-24  gap-3 px-4 md:p-0 md:gap-4 flex-col">
         <div 
           onClick={()=>{router.push('/login')}}
-        className={`flex shadow-xl transition-transform duration-300 hover:scale-110  shadow-gray-100 md:shadow-gray-300 items-center ${inView?"animate-[slideDownSm_2s] lg:animate-[slideDown_2s]":"opacity-0"} bg-[#FAD6BA]    h-20 md:w-[102%] lg:w-[94%] xl:w-[87%] `}>
+        className={` hidden lg:flex shadow-xl transition-transform duration-300 hover:scale-110  shadow-gray-100 md:shadow-gray-300 items-center ${inView?"animate-[slideDownSm_2s] lg:animate-[slideDown_2s]":"opacity-0"} bg-[#FAD6BA]    h-20 md:w-[102%] lg:w-[94%] xl:w-[87%] `}>
          <Image className="ml-4 md:block hidden " src={'/file.png'} width={30} height={30} alt="Thunder"></Image>
         <div className="w-6 mr-2 md:hidden " ><Image className="ml-4 md:hidden " src={'/file.png'} width={30} height={30} alt="Thunder"></Image>
         </div> 
@@ -38,7 +38,7 @@ const ValueSection = ()=>{
 
         <div 
         onClick={()=>{router.push('/Jobs')}}
-        className={`flex items-center shadow-lg shadow-gray-100 transition-transform duration-300 hover:scale-110  md:shadow-gray-300 ${inView?"animate-[slideDownSm_1s] lg:animate-[slideDown_1s]":"opacity-0"}   bg-[#F5ECAE] h-20 md:w-[102%] lg:w-[94%] xl:w-[87%] `}>
+        className={`hidden lg:flex items-center shadow-lg shadow-gray-100 transition-transform duration-300 hover:scale-110  md:shadow-gray-300 ${inView?"animate-[slideDownSm_1s] lg:animate-[slideDown_1s]":"opacity-0"}   bg-[#F5ECAE] h-20 md:w-[102%] lg:w-[94%] xl:w-[87%] `}>
          <Image className="ml-4 md:block hidden" src={'/magnifying-glass.png'} width={30} height={30} alt="Thunder"></Image>  
          <div className="w-6 mr-2 md:hidden " ><Image className="ml-4 md:hidden " src={'/magnifying-glass.png'} width={30} height={30} alt="Thunder"></Image>
          </div> 
@@ -50,7 +50,7 @@ const ValueSection = ()=>{
 
         <div
         onClick={()=>{router.push('/Cv')}}
-        className={`flex items-center shadow-md shadow-gray-100 transition-transform duration-300 hover:scale-110 md:shadow-gray-300 ${inView?"animate-[slideDownSm_0.5s] lg:animate-[slideDown_0.5s]":"opacity-0"}  md:w-[102%] lg:w-[94%] bg-[#EDF9F0] h-20 xl:w-[87%]`}>
+        className={`hidden lg:flex items-center shadow-md shadow-gray-100 transition-transform duration-300 hover:scale-110 md:shadow-gray-300 ${inView?"animate-[slideDownSm_0.5s] lg:animate-[slideDown_0.5s]":"opacity-0"}  md:w-[102%] lg:w-[94%] bg-[#EDF9F0] h-20 xl:w-[87%]`}>
          <Image className="ml-4 md:block hidden" src={'/deal.png'} width={35} height={35} alt="Thunder"></Image>  
          <div className="w-6 mr-2 md:hidden " ><Image className="ml-4 md:hidden " src={'/deal.png'} width={30} height={30} alt="Thunder"></Image>
          </div> 
@@ -61,7 +61,7 @@ const ValueSection = ()=>{
         </div>
        </div>
       
-       <button className={` lg:hidden  mt-9 ${language=='fr'?"w-56 sm:w-72":"w-44 sm:w-64"} sm:mt-12  mb-4 sm:text-lg text-sm text-white  rounded-sm font-bold text-center h-10 bg-[#ff7300]`}>{translate('Sign Up For Free')}</button>
+       <button className={` lg:hidden   ${language=='fr'?"w-56 sm:w-72":"w-44 sm:w-64"} sm:mt-10  mb-4 sm:text-lg text-sm text-white  rounded-sm font-bold text-center h-10 bg-[#ff7300]`}>{translate('Sign Up For Free')}</button>
 
 
       </div> 

@@ -1,6 +1,8 @@
 import { FileText } from "lucide-react";
+import { useTranslation } from "../Context/TranslationContext.";
 
 const Footer = ()=>{
+    const { translate, setLanguage, language } = useTranslation();
 
 
     return(
@@ -13,36 +15,36 @@ const Footer = ()=>{
                         <span className="ml-2 text-xl font-bold text-white">Adopte Un Coiffeur</span>
                       </div>
                       <p className="mt-2 text-sm text-white">
-                        Connecting top talent with great employers
+                        {translate('footer_subheading')}
                       </p>
                     </div>
                     <div className="grid grid-cols-2 gap-8 md:grid-cols-3">
                     <div>
-                        <h3 className="text-sm font-semibold text-white tracking-wider uppercase">Easy Access</h3>
+                        <h3 className="text-sm font-semibold text-white tracking-wider uppercase">{translate('easy_access')}</h3>
                         <ul className="mt-4 space-y-4">
-                          <li><a href="/" className="text-base text-white ">Accuiel</a></li>
-                          <li><a href="/Jobs" className="text-base text-white ">Offrres d’emploi</a></li>
-                          <li><a href="/Cv" className="text-base text-white ">CVthèque</a></li>
-                          <li><a href="/blog" className="text-base text-white ">Conseils</a></li>
-                          <li><a href="/aboutus" className="text-base text-white ">À propos</a></li> 
+                          <li><a href="/" className="text-base text-white ">{translate('home')}</a></li>
+                          <li><a href="/Jobs" className="text-base text-white ">{translate('job_offers')}</a></li>
+                          <li><a href="/Cv" className="text-base text-white ">{translate('cv_library')}</a></li>
+                          <li><a href="/blog" className="text-base text-white ">{translate('advice')}</a></li>
+                          <li><a href="/aboutus" className="text-base text-white ">{translate('about_us')}</a></li> 
                           <li><a href="/Contact-us" className="text-base text-white ">Contact & Support</a></li> 
                                                    
                         </ul>
                       </div>
                       <div>
-                        <h3 className="text-sm font-semibold text-white tracking-wider uppercase">For Employers</h3>
+                        <h3 className="text-sm font-semibold text-white tracking-wider uppercase">{translate("for_employers")}</h3>
                         <ul className="mt-4 space-y-4">
-                          <li><a href="#" className="text-base text-white ">Search CVs</a></li>
-                          <li><a href="#" className="text-base text-white ">Pricing</a></li>
-                          <li><a href="#" className="text-base text-white ">Premium Access</a></li>
+                          <li><a href="#" className="text-base text-white ">{translate('search_cv')}</a></li>
+                          <li><a href="#" className="text-base text-white ">{translate('Pricing')}</a></li>
+                          <li><a href="#" className="text-base text-white ">{translate('premium_access')}</a></li>
                         </ul>
                       </div>
                       <div>
-                        <h3 className="text-sm font-semibold text-white tracking-wider uppercase">For Candidates</h3>
+                        <h3 className="text-sm font-semibold text-white tracking-wider uppercase">{translate('for_candidates')}</h3>
                         <ul className="mt-4 space-y-4">
-                          <li><a href="#" className="text-base text-white">Upload CV</a></li>
-                          <li><a href="#" className="text-base text-white ">Build CV</a></li>
-                          <li><a href="#" className="text-base text-white">Find Jobs</a></li>
+                          <li><a href="#" className="text-base text-white">{translate('upload_cv')}</a></li>
+                          <li><a href="#" className="text-base text-white ">{translate('build_cv')}</a></li>
+                          <li><a href="#" className="text-base text-white">{translate('find_jobs')}</a></li>
                         </ul>
                       </div>
                      
@@ -53,7 +55,7 @@ const Footer = ()=>{
                       {/* Social links */}
                     </div>
                     <p className="mt-8 text-base text-gray-400 md:mt-0 md:order-1">
-                      &copy; 2025 Adopte un coiffuer. All rights reserved.
+                      &copy; {translate('rights_reserved')}
                     </p>
                   </div>
                 </div>

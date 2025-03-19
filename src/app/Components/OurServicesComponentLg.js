@@ -32,14 +32,10 @@ return (
         </div>  
         <div className={`flex absolute  md:top-[34%] lg:top-80 md:left-[5%] lg:left-[8%] xl:left-[12%] ${inView?"animate-[slideDown_1s]":"opacity-0"}  flex-col w-[10.2rem] h-[10.2rem] lg:w-[12rem] lg:h-[12rem] `}>
         <div className="self-center mt-2"> <Image src={'/verify.png'} width={35} height={35}></Image></div>
-        <h1 className="md:text-xl lg:text-2xl md:mt-1 lg:mt-4 font-bold text-center">{translate('skill_based_matching')}</h1> 
-        <h1 className="break-words md:p-1 md:text-xs lg:text-sm lg:p-1   mt-1 text-center">{translate('skill_based_matching_subheading')}</h1>
+        <h1 className="md:text-xl lg:text-2xl md:mt-1 lg:mt-4 font-bold text-center">{translate('talent_above_all')}</h1> 
+        <h1 className="break-words md:p-1 md:text-xs lg:text-sm lg:p-1   mt-1 text-center">{translate('talent_above_all_subheading')}</h1>
         </div> 
-        <div className={`flex absolute  md:top-[60%] lg:top-[60%]  ${inView?"animate-[slideDown_1s]":"opacity-0"}  flex-col w-[10.2rem] h-[10.2rem] lg:w-[12rem] lg:h-[12rem]`}>
-        <div className="self-center mt-2"> <Image src={'/verify.png'} width={35} height={35}></Image></div>
-        <h1 className="md:text-xl lg:text-2xl md:mt-1 lg:mt-4 font-bold text-center">{translate('skill_based_matching')}</h1> 
-        <h1 className="break-words md:p-1 md:text-xs lg:text-sm lg:p-1   mt-1 text-center">{translate('skill_based_matching_subheading')}</h1>
-        </div> 
+    
 
         <button className="absolute md:top-[89%]  animate-[bounce_2s] lg:top-[90%]  w-64 h-12 hover:bg-[#ff3700] border border-black text-black hover:text-white hover:border-0 ">
           {translate('Lets Explore')}
