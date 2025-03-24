@@ -479,7 +479,7 @@
 // </div>
 // </div>)}
 'use client'
-import React, { useState } from 'react';
+import React, { Suspense, useState } from 'react';
 import { 
   Search, 
   BookmarkPlus, 
@@ -504,9 +504,15 @@ import {
 import Navbar from '../Components/Navbar';
 import Footer from '../Components/Footer';
 import { useTranslation } from '../Context/TranslationContext.';
+import { useSearchParams } from 'next/navigation';
 
-export default function CVTechApp() {
-  const [activeTab, setActiveTab] = useState('employer');
+ function CVTechApp() {
+  const params = useSearchParams()
+  const activeTabVal = params.get('value')
+  const finalActiveTabVal = activeTabVal=="candidate"?'candidate':'employer'
+
+  const [activeTab, setActiveTab] = useState(finalActiveTabVal);
+  
   const [showFilters, setShowFilters] = useState(false);
   const [mobileMenu, setMobileMenu] = useState(false);
       const { translate, setLanguage, language } = useTranslation();
@@ -835,9 +841,12 @@ const EmployerView = ({ showFilters, setShowFilters }) => {
 
 // Candidate View Component
 const CandidateView = () => {
-  const [activeTab, setActiveTab] = useState('upload');
+  const params = useSearchParams()
+  const candidatetabview  = params.get('candidateview')
+  const finalcandidatetabview = candidatetabview==null?"upload":candidatetabview
+  const [activeTab, setActiveTab] = useState(finalcandidatetabview);
   const { translate, setLanguage, language } = useTranslation();
-
+ 
   return (
     <div>
       <div className="pb-5 border-b border-gray-200">
@@ -980,3 +989,12 @@ const CandidateView = () => {
     </div>
   );
 };
+
+
+export default function CvTechWrapper() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <CVTechApp></CVTechApp>
+    </Suspense>
+  );
+}

@@ -1,10 +1,15 @@
+'use client';
 import { FileText } from "lucide-react";
 import { useTranslation } from "../Context/TranslationContext.";
+import { useRouter } from "next/navigation";
 
 const Footer = ()=>{
     const { translate, setLanguage, language } = useTranslation();
+    const router = useRouter() 
 
-
+    const handleClick=(value)=>{
+     router.push(`/Cv?value=candidate&candidateview=${value}`) 
+    }
     return(
          <footer className="bg-[#3D3D3D] mt-12">
                 <div className="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
@@ -40,9 +45,9 @@ const Footer = ()=>{
                       <div>
                         <h3 className="text-sm font-semibold text-white tracking-wider uppercase">{translate('for_candidates')}</h3>
                         <ul className="mt-4 space-y-4">
-                          <li><a href="#" className="text-base text-white">{translate('upload_cv')}</a></li>
-                          <li><a href="#" className="text-base text-white ">{translate('build_cv')}</a></li>
-                          <li><a href="#" className="text-base text-white">{translate('find_jobs')}</a></li>
+                          <li><a onClick={()=>handleClick('upload')} className="text-base text-white">{translate('upload_cv')}</a></li>
+                          <li><a onClick={()=>handleClick('builder')} className="text-base text-white ">{translate('build_cv')}</a></li>
+                          <li><a href="/Jobs" className="text-base text-white">{translate('find_jobs')}</a></li>
                         </ul>
                       </div>
                      
