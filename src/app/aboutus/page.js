@@ -180,12 +180,14 @@ import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
 import { Swiper, SwiperSlide } from "swiper/react";
 import Footer from "../Components/Footer";
+import { useTranslation } from "../Context/TranslationContext.";
 
 export default function Aboutus() {
+      const { translate, setLanguage, language } = useTranslation();
   const Serviceboxreuseabledata = [
     {
-      title: 'Find Talent',
-      subheading: 'Quickly find qualified hairdressers based on your needs (permanent, fixed-term, freelance, temporary).',
+      title: translate('find_talent'),
+      subheading: translate('find_talent_subheading'),
       icon: Handshake
     },
     {
@@ -222,10 +224,10 @@ export default function Aboutus() {
       {/* Hero Section with Gradient */}
       <div className="relative overflow-hidden bg-gradient-to-r from-[#FA4909] to-[#FF7A45] py-20 flex flex-col justify-center items-center w-full shadow-lg">
         <div className="absolute top-0 left-0 w-full h-full bg-[url('/pattern.png')] opacity-10" />
-        <h1 className="text-4xl md:text-5xl font-extrabold text-white z-10">About Us</h1>
+        <h1 className="text-4xl md:text-5xl font-extrabold text-white z-10">{translate('About_us_for_main_page')}</h1>
         <div className="h-1 w-20 bg-white my-4 rounded-full z-10" />
         <h2 className="text-xl md:text-2xl font-medium text-white text-center max-w-2xl px-4 z-10">
-          Empowering Barbers & Businesses – Bridging the Gap Between Talent and Opportunity!
+         {translate('About_us_for_main_page_subheading')}
         </h2>
       </div>
       
@@ -233,7 +235,7 @@ export default function Aboutus() {
       <div className="grid grid-cols-1 md:grid-cols-2">
         <div className="flex h-auto md:h-[35rem] bg-gradient-to-br from-[#FFB07C] to-[#FFD0B0] flex-col items-center justify-center py-16 px-6">
           <h2 className="text-black font-bold text-4xl xl:text-5xl mb-8 relative">
-            WHO WE ARE
+           {translate('who_are_we')}
             <span className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 h-1 w-16 bg-[#FA4909] rounded-full"></span>
           </h2>
           <p className="text-center text-base md:text-lg max-w-xl leading-relaxed mb-10">
@@ -275,9 +277,9 @@ export default function Aboutus() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
           <div className="flex flex-col justify-center">
             <div className="relative mb-8">
-              <h2 className="text-[#F76A0C] text-5xl lg:text-6xl font-light">Why</h2>
-              <h2 className="text-[#DD171B] mt-2 font-bold text-5xl lg:text-6xl">Choose</h2>
-              <h2 className="text-[#DD171B] mt-2 font-bold text-5xl lg:text-6xl">Us</h2>
+              <h2 className="text-[#F76A0C] text-5xl lg:text-6xl font-light">{translate('why')}</h2>
+              <h2 className="text-[#DD171B] mt-2 font-bold text-5xl lg:text-6xl">{translate('choose')}</h2>
+              <h2 className="text-[#DD171B] mt-2 font-bold text-5xl lg:text-6xl">{translate('us_for_about_us')}</h2>
               <div className="absolute -bottom-4 left-0 h-1 w-20 bg-[#F76A0C] rounded-full"></div>
             </div>
           </div>
@@ -332,7 +334,7 @@ export default function Aboutus() {
       <div className="py-16 px-4 max-w-7xl mx-auto">
         <div className="flex justify-center items-center flex-col mb-12">
           <h2 className="text-black font-bold text-3xl md:text-4xl relative inline-block">
-            OUR SERVICES
+            {translate('our_services')}
             <span className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 h-1 w-16 bg-[#FA4909] rounded-full"></span>
           </h2>
         </div>

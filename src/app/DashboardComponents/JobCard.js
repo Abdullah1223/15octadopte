@@ -67,7 +67,7 @@
 // export default JobCard;
 
 
-import { MapPin, Clock, DollarSign, Briefcase, Bookmark } from 'lucide-react';
+import { MapPin, Clock, DollarSign, Briefcase, Bookmark, Euro } from 'lucide-react';
 import { useTranslation } from '../Context/TranslationContext.';
 
 const JobCard = ({ job }) => {
@@ -102,7 +102,7 @@ const JobCard = ({ job }) => {
           <span>{job.experience}</span>
         </div>
         <div className="flex items-center mr-4 mb-2">
-          <DollarSign size={16} className="mr-1" />
+          <Euro size={16} className="mr-1" />
           <span>{job.salary}</span>
         </div>
         <div className="flex items-center mb-2">

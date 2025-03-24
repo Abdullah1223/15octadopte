@@ -498,7 +498,8 @@ import {
   Languages, 
   Star,
   Menu,
-  X
+  X,
+  Euro
 } from 'lucide-react';
 import Navbar from '../Components/Navbar';
 import Footer from '../Components/Footer';
@@ -571,36 +572,36 @@ const EmployerView = ({ showFilters, setShowFilters }) => {
     {
       id: 1,
       name: 'Alex Johnson',
-      role: 'Barber',
+      role: translate('Barber_for_cv'),
       location: 'Paris, France',
       experience: '7 years',
-      salary: '$90,000 - $120,000',
-      contractType: 'Full-time',
-      skills: [ 'Color Specialist', 'Male Only', 'UniSex'],
+      salary: '€90,000 - €120,000',
+      contractType: translate('full_time'),
+      skills: [ translate('color_expert'), translate('male_only'), translate('unisex')],
       languages: ['English (Native)', 'Spanish (Intermediate)','French'],
       lastActive: '2 days ago'
     },
     {
       id: 2,
       name: 'Sarah Williams',
-      role: 'Chief Barber',
+      role: translate('chief_barber'),
       location: 'Paris, France',
       experience: '5 years',
       salary: '£50,000 - £65,000',
-      contractType: 'Part-Time',
-      skills: ['Female Only','Hair Specialist'],
+      contractType: translate('part_time'),
+      skills: [translate('female_barber'),translate('color_expert')],
       languages: ['English (Native)', 'French (Basic)'],
       lastActive: 'Today'
     },
     {
       id: 3,
       name: 'Michael Chen',
-      role: 'Head',
+      role: translate('head'),
       location: 'Paris,France',
       experience: '4 years',
-      salary: '$80,000 - $95,000',
+      salary: '€80,000 - €95,000',
       contractType: 'Freelance',
-      skills: ['Hair Style Specialist','Hair Color Specialist',],
+      skills: [translate('female_barber'),translate('color_expert')],
       languages: ['English (Fluent)', 'Mandarin (Native)'],
       lastActive: '1 week ago'
     }
@@ -612,7 +613,7 @@ const EmployerView = ({ showFilters, setShowFilters }) => {
         <h2 className="text-xl font-bold leading-7 text-gray-900 sm:text-2xl lg:text-3xl">
          {translate('cv_search_&_filtering')}
         </h2>
-        <div className="mt-3 sm:mt-0 sm:ml-4">
+        {/* <div className="mt-3 sm:mt-0 sm:ml-4">
           <button 
             type="button" 
             className="inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-orange-600 hover:bg-orange-700 focus:outline-none"
@@ -620,7 +621,7 @@ const EmployerView = ({ showFilters, setShowFilters }) => {
             <Star className="mr-2 h-4 w-4" />
             {translate('upgrade_to_premium')}
           </button>
-        </div>
+        </div> */}
       </div>
 
       {/* Search and Filters */}
@@ -677,7 +678,7 @@ const EmployerView = ({ showFilters, setShowFilters }) => {
                 <label className="block text-sm font-medium text-gray-700">{translate('salary_range')}</label>
                 <div className="mt-1 relative rounded-md shadow-sm">
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                    <DollarSign className="h-4 w-4 text-gray-400" />
+                    <Euro className="h-4 w-4 text-gray-400" />
                   </div>
                   <input
                     type="text"
@@ -744,10 +745,10 @@ const EmployerView = ({ showFilters, setShowFilters }) => {
                   <div className="mt-3 sm:mt-0 sm:ml-4 flex-shrink-0 flex">
                     <button className="bg-white rounded-md font-medium text-orange-600 hover:text-indigo-500 focus:outline-none flex items-center">
                       <BookmarkPlus className="h-5 w-5 mr-1" />
-                      Save
+                      {translate('save')}
                     </button>
                     <button className="ml-4 bg-[#F9E5CB] px-3 py-1 rounded-md font-medium text-[#ff7300] hover:bg-orange-200">
-                      View CV
+                      {translate('view_cv')}
                     </button>
                   </div>
                 </div>
@@ -762,7 +763,7 @@ const EmployerView = ({ showFilters, setShowFilters }) => {
                       {candidate.experience}
                     </p>
                     <p className="mt-2 sm:mt-0 sm:ml-6 flex items-center text-sm text-gray-500">
-                      <DollarSign className="flex-shrink-0 mr-1.5 h-4 w-4 text-gray-400" />
+                      <Euro className="flex-shrink-0 mr-1.5 h-4 w-4 text-gray-400" />
                       {candidate.salary}
                     </p>
                     <p className="mt-2 sm:mt-0 sm:ml-6 flex items-center text-sm text-gray-500">
@@ -772,13 +773,13 @@ const EmployerView = ({ showFilters, setShowFilters }) => {
                   </div>
                   <div className="mt-2 sm:mt-0 flex items-center text-sm text-gray-500">
                     <p className="text-sm text-gray-500">
-                      Last active: {candidate.lastActive}
+                      {translate('last_active')} {candidate.lastActive}
                     </p>
                   </div>
                 </div>
                 <div className="mt-2">
                   <div className="mt-2">
-                    <p className="text-sm font-medium text-gray-500">Skills:</p>
+                    <p className="text-sm font-medium text-gray-500">{translate('skills_')}:</p>
                     <div className="mt-1 flex flex-wrap">
                       {candidate.skills.map((skill, index) => (
                         <span key={index} className="mr-2 mb-2 px-2 py-1 text-xs rounded-full bg-[#ff7300] text-white">

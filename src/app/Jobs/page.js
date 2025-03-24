@@ -19,8 +19,8 @@ export default function Jobs() {
       location: 'Paris, France',
       experience: '3 Years',
       salary: '4000€',
-      type: 'Full Time',
-      skills: ['Unisex', 'Beard Styling', 'Hair Coloring'],
+      type: translate('full_time'),
+      skills: [translate('unisex'), translate('beard_styling'), translate('hair_coloring')],
       publishedDate: '2/2/25',
     },
     {
@@ -30,8 +30,8 @@ export default function Jobs() {
       location: 'Lyon, France',
       experience: '2 Years',
       salary: '3500€',
-      type: 'Part Time',
-      skills: ['Female Only', 'Hair Extensions', 'Bridal'],
+      type: translate('part_time'),
+      skills: [translate('unisex'), translate('beard_styling'), translate('hair_coloring')],
       publishedDate: '1/28/25',
     },
     {
@@ -42,7 +42,7 @@ export default function Jobs() {
       experience: '1 Year',
       salary: '2800€',
       type: 'Contract',
-      skills: ['Male Only', 'Beard Grooming', 'Fade Specialist'],
+      skills: [translate('unisex'), translate('beard_styling'), translate('hair_coloring')],
       publishedDate: '2/5/25',
     },
     {
@@ -52,8 +52,8 @@ export default function Jobs() {
       location: 'Bordeaux, France',
       experience: '4 Years',
       salary: '4200€',
-      type: 'Full Time',
-      skills: ['Unisex', 'Color Correction', 'Balayage'],
+      type: translate('part_time'),
+      skills: [translate('unisex'), translate('beard_styling'), translate('hair_coloring')],
       publishedDate: '2/1/25',
     },
   ];
@@ -67,27 +67,14 @@ export default function Jobs() {
       location: 'Paris, France',
       experience: '5+ Years',
       salary: '5000€',
-      type: 'Full Time',
-      skills: ['Unisex', 'Creative Styling', 'Team Management'],
+      type:translate('full_time'),
+      skills: [translate('unisex'), translate('creative_styling'),translate('team_management')],
       publishedDate: '3/1/25',
       promoted: true,
       promotionEnds: '3/15/25',
       description: translate('promoted_jobs_1_subheading')
     },
-    {
-      id: 6,
-      title: 'Senior Colorist - Luxury Salon',
-      company: 'Maison de Beauté',
-      location: 'Nice, France',
-      experience: '4+ Years',
-      salary: '4500€',
-      type: 'Full Time',
-      skills: ['Female Only', 'Color Expert', 'Balayage Specialist'],
-      publishedDate: '3/5/25',
-      promoted: true,
-      promotionEnds: '3/20/25',
-      description: 'Join our exclusive beachfront salon. Looking for experienced colorists with a strong portfolio and celebrity clientele experience.'
-    }
+    
   ];
 
   const [isFilterOpen, setIsFilterOpen] = useState(false);
@@ -102,9 +89,9 @@ export default function Jobs() {
   });
 
   const locations = ['Paris', 'Lyon', 'Marseille', 'Bordeaux', 'Nice', 'Toulouse'];
-  const contractTypes = ['Full Time', 'Part Time', 'Contract', 'Freelance'];
+  const contractTypes = [translate('full_time'), translate('part_time'), 'Contract', 'Freelance'];
   const salaryRanges = ['2500€', '3000€', '3500€', '4000€', '4500€'];
-  const specializations = ['Unisex', 'Female Only', 'Male Only', 'Beard Styling', 'Hair Coloring', 'Bridal', 'Hair Extensions', 'Color Expert', 'Creative Styling', 'Team Management'];
+  const specializations = [translate('unisex'), translate('female_barber'), translate('male_only'),translate('beard_styling'), translate('hair_coloring'), translate('bridal'), translate('hair_extensions'), translate('color_expert'), translate('creative_styling'), translate('team_management')];
 
   // Initialize jobs data on component mount
   useEffect(() => {
@@ -231,7 +218,7 @@ export default function Jobs() {
             </div>
             <input
               type="text"
-              placeholder="Search by job title, company or location"
+              placeholder={translate('Search_by_job')}
               className="block w-full pl-10 pr-3 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent shadow-sm text-gray-700"
               value={filters.searchQuery}
               onChange={handleSearch}
@@ -263,7 +250,7 @@ export default function Jobs() {
               <div className="flex justify-between items-center mb-5">
                 <h2 className="text-lg font-semibold text-gray-800 flex items-center">
                   <Filter size={18} className="mr-2 text-orange-500" />
-                  Refine Your Search
+                  {translate('refine_your_search')}
                 </h2>
                 <button 
                   onClick={toggleFilter}
@@ -278,14 +265,14 @@ export default function Jobs() {
                 <div className="space-y-2">
                   <label className="block text-sm font-medium text-gray-700 flex items-center">
                     <MapPin size={16} className="mr-1 text-orange-400" />
-                    Location
+                    {translate('location')}
                   </label>
                   <select 
                     className="w-full p-2 border border-gray-200 rounded-md focus:ring-2 focus:ring-orange-400 focus:border-transparent bg-gray-50"
                     value={filters.location}
                     onChange={(e) => handleFilterChange('location', e.target.value)}
                   >
-                    <option value="">Any Location</option>
+                    <option value="">{translate('any_location')}</option>
                     {locations.map((location, index) => (
                       <option key={index} value={location}>{location}</option>
                     ))}
@@ -296,14 +283,14 @@ export default function Jobs() {
                 <div className="space-y-2">
                   <label className="block text-sm font-medium text-gray-700 flex items-center">
                     <Briefcase size={16} className="mr-1 text-orange-400" />
-                    Contract Type
+                    {translate('contract_type')}
                   </label>
                   <select 
                     className="w-full p-2 border border-gray-200 rounded-md focus:ring-2 focus:ring-orange-400 focus:border-transparent bg-gray-50"
                     value={filters.contractType}
                     onChange={(e) => handleFilterChange('contractType', e.target.value)}
                   >
-                    <option value="">Any Type</option>
+                    <option value="">{translate('any_type')}</option>
                     {contractTypes.map((type, index) => (
                       <option key={index} value={type}>{type}</option>
                     ))}
@@ -314,14 +301,14 @@ export default function Jobs() {
                 <div className="space-y-2">
                   <label className="block text-sm font-medium text-gray-700 flex items-center">
                     <DollarSign size={16} className="mr-1 text-orange-400" />
-                    Minimum Salary
+                    {translate('minimum_salary')}
                   </label>
                   <select 
                     className="w-full p-2 border border-gray-200 rounded-md focus:ring-2 focus:ring-orange-400 focus:border-transparent bg-gray-50"
                     value={filters.minSalary}
                     onChange={(e) => handleFilterChange('minSalary', e.target.value)}
                   >
-                    <option value="">Any Salary</option>
+                    <option value="">{translate('any_salary')}</option>
                     {salaryRanges.map((range, index) => (
                       <option key={index} value={range}>Min {range}</option>
                     ))}
@@ -359,7 +346,7 @@ export default function Jobs() {
                   onClick={resetFilters}
                   className="px-5 py-2 border border-gray-200 rounded-md text-gray-600 hover:bg-gray-50 transition-colors"
                 >
-                  Reset All
+                  {translate('reset_all')}
                 </motion.button>
                 <motion.button
                   whileHover={{ scale: 1.02 }}
@@ -367,7 +354,7 @@ export default function Jobs() {
                   onClick={applyFilters}
                   className="px-5 py-2 bg-gradient-to-r from-orange-500 to-amber-500 text-white rounded-md hover:from-orange-600 hover:to-amber-600 transition-all shadow-md font-medium"
                 >
-                  Apply Filters
+                  {translate('apply_filters')}
                 </motion.button>
               </div>
             </div>
@@ -397,7 +384,7 @@ export default function Jobs() {
                 <FeaturedJobCard key={job.id} job={job} index={index} />
               ))}
           </div>
-          
+{/*           
           <div className="mt-5 text-right">
             <motion.button 
               whileHover={{ scale: 1.02 }}
@@ -406,7 +393,7 @@ export default function Jobs() {
               {translate('promote_your_job_posting')}
               <ArrowRight size={16} className="ml-1" />
             </motion.button>
-          </div>
+          </div> */}
         </motion.div>
       )}
 

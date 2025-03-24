@@ -10,7 +10,7 @@ const Loginpagelgview =()=>{
 
      <div>
 
-     <h1 className=" self-start lg:absolute lg:top-20 xl:top-12 text-black font-semibold  lg:text-3xl lg:ml-32  xl:text-4xl xl:ml-52 ">ADOPTE UN COIFFER</h1>
+     <h1 className=" self-start lg:absolute lg:top-20 xl:top-12 text-black font-semibold  lg:text-3xl lg:ml-32  xl:text-4xl xl:ml-52 ">ADOPTE UN COIFFEUR</h1>
     <h1 className=" lg:absolute lg:top-[6.6rem] xl:top-20 mt-3 text-black font-semibold lg:text-3xl lg:ml-32 xl:text-4xl xl:ml-52 ">WHERE <span className="bg-[white] text-[#ff7300] px-3 text-center mr-1"> TALENT </span> MEETS</h1>
     <h1 className=" lg:absolute  lg:top-36  xl:top-32 mt-3 xl:mt-2 text-black font-semibold lg:text-3xl lg:ml-32  xl:text-4xl xl:ml-52 ">OPPORTUNITIES</h1>
     <div>

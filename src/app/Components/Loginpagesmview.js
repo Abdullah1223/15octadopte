@@ -5,10 +5,10 @@ const Loginpagesmview = ()=>{
  
    return( 
 
-    <div className="bg-white">
+    <div className="">
         <div className="flex flex-col  items-center lg:hidden bg-[#FA4909] h-[23rem] sm:h-[26rem]">
     <div className="ml-2 sm:ml-0 mt-8 md:mt-8">
-    <h1 className="   text-black font-semibold text-2xl sm:text-4xl md:text-5xl  ">ADOPTE UN COIFFER</h1>
+    <h1 className="   text-black font-semibold text-2xl sm:text-4xl md:text-5xl  ">ADOPTE UN COIFFEUR</h1>
     <h1 className="mt-1 text-black font-semibold text-2xl sm:text-4xl md:text-5xl ">WHERE <span className="bg-[white] text-[#ff7300] px-3 text-center mr-1"> TALENT </span> MEETS</h1>
     <h1 className="  text-black font-semibold text-2xl sm:text-4xl md:text-5xl   ">OPPORTUNITIES</h1>
 

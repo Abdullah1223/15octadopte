@@ -1,5 +1,5 @@
 'use client';
-import { AlertCircle, Bookmark, Briefcase, ChevronDown, Clock, DollarSign, MapPin, Star } from "lucide-react";
+import { AlertCircle, Bookmark, Briefcase, ChevronDown, Clock, DollarSign, Euro, MapPin, Star } from "lucide-react";
 import { useState } from "react";
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from "../Context/TranslationContext.";
@@ -17,7 +17,7 @@ const FeaturedJobCard = ({ job, index }) => {
         <div className="p-6 relative">
           <div className="absolute top-4 right-4 bg-gradient-to-r from-orange-500 to-amber-500 text-white text-xs px-3 py-1 rounded-full font-semibold flex items-center shadow-md">
             <Star size={12} className="mr-1" />
-            PROMOTED
+           {translate('promoted')}
           </div>
           
           <div className="flex justify-between items-start flex-wrap gap-4 mb-4">
@@ -56,7 +56,7 @@ const FeaturedJobCard = ({ job, index }) => {
               <span>{job.experience}</span>
             </div>
             <div className="flex items-center bg-white p-2 rounded-lg border border-orange-100">
-              <DollarSign size={16} className="mr-2 text-orange-400" />
+              <Euro size={16} className="mr-2 text-orange-400" />
               <span className="font-medium">{job.salary}</span>
             </div>
             <div className="flex items-center bg-white p-2 rounded-lg border border-orange-100">

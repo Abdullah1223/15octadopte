@@ -34,6 +34,7 @@ const Footer = ()=>{
                         <h3 className="text-sm font-semibold text-white tracking-wider uppercase">{translate("for_employers")}</h3>
                         <ul className="mt-4 space-y-4">
                           <li><a href="#" className="text-base text-white ">{translate('search_cv')}</a></li>
+                          <li><a href="#" className="text-base text-white ">{translate('job_offer_creation')}</a></li>
                         </ul>
                       </div>
                       <div>
