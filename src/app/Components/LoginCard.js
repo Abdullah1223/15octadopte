@@ -1,6 +1,6 @@
 'use client'
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import { Upload, File, ChevronDown, CircleUser, BriefcaseBusiness, User, UserIcon } from "lucide-react";
 import Uploadfilecomponent from "./uploadfilecomponent";
 import { useParams, useSearchParams } from "next/navigation";
@@ -166,4 +166,10 @@ return(
 
 }
 
-export default LoginCard;
+export default function LoginCardWrapper() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <LoginCard />
+    </Suspense>
+  );
+}

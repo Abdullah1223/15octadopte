@@ -97,10 +97,10 @@ const JobCard = ({ job }) => {
           <MapPin size={16} className="mr-1" />
           <span>{job.location}</span>
         </div>
-        <div className="flex items-center mr-4 mb-2">
+        {/* <div className="flex items-center mr-4 mb-2">
           <Clock size={16} className="mr-1" />
           <span>{job.experience}</span>
-        </div>
+        </div> */}
         <div className="flex items-center mr-4 mb-2">
           <Euro size={16} className="mr-1" />
           <span>{job.salary}</span>

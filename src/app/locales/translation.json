@@ -233,7 +233,19 @@
        "upload_company_logo":"Please Upload Company Logo",
        "login":"Login",
        "find_talent":"Find Talent",
-       "find_talent_subheading":"Quickly find qualified hairdressers based on your needs (permanent, fixed-term, freelance, temporary)"
+       "find_talent_subheading":"Quickly find qualified hairdressers based on your needs (permanent, fixed-term, freelance, temporary)",
+       "by_uploading":"By uploading your CV, you agree to our",
+       "Privacy_policy":"Privacy Policy",
+       "upload_a_file":"Upload A File",
+       "or_drag_drop":"or drag and drop",
+       "why_you_will_love":"Why You'll Love This Role",
+       "competitive_salary":"Competitive salary with performance bonuses",
+       "flexible_working_hours":"Flexible working hours and work-life balance",
+       "professional_development":"Professional development and growth opportunities",
+       "modern_salon":"Modern salon with the latest premium equipment",
+       "loyal_client_base":"Loyal client base and supportive team environment",
+       "promotion_ends":"Promotion Ends",
+       "show_less":"Show Less"
       },
     "fr": {
       "welcome": "Bienvenue sur notre site",
@@ -448,18 +460,18 @@
        "why":"POURQUOI",
        "choose":"NOUS",
        "us_for_about_us":"CHOISIR",
-       "name":"Nom",
-       "last_name":"Nom De Famille",
+       "name":"Prénom",
+       "last_name":"Nom",
        "enter_email":"Veuillez Entrer Votre Email",
        "enter_company_name":"Veuillez Entrer Le Nom De Votre Entreprise",
        "enter_siret_num":"Veuillez Entrer Votre Numéro SIRET",
        "enter_id":"Veuillez Entrer l'Identifiant",
        "enter_password":"Veuillez Entrer Votre Mot De Passe",
-       "upload_kibs":"Veuillez Télécharger Le Document KIBS Récent",
-       "upload_cv_login":"Veuillez Télécharger Un CV",
-       "upload_profile_pic":"Veuillez Télécharger Une Photo De Profil",
+       "upload_kibs":"Veuillez Deposer Le Document KIBS Récent",
+       "upload_cv_login":"Veuillez Deposer Un CV",
+       "upload_profile_pic":"Veuillez Deposer Une Photo De Profil",
        "acceptable_format_pdf":"Les Formats Acceptés Sont ",
-       "upload_company_logo":"Veuillez Télécharger Le Logo De l'Entreprise",
+       "upload_company_logo":"Veuillez Deposer Le Logo De l'Entreprise",
        "acceptable_format_png":"Les Formats Acceptés Sont PNG, JPEG, JPG",
        "choose_file":"Choisir Un Fichier",
        "or_drop_here":"Ou Déposez Ici",
@@ -468,8 +480,20 @@
        "forget_password":"Mot De Passe Oublié ?",
        "login":"Se Connecter",
        "find_talent":"Trouver Des Talents",
-       "find_talent_subheading":"Trouvez rapidement des coiffeurs qualifiés en fonction de vos besoins (permanent, CDD, freelance, temporaire)" 
-
+       "find_talent_subheading":"Trouvez rapidement des coiffeurs qualifiés en fonction de vos besoins (permanent, CDD, freelance, temporaire)" ,
+       "by_uploading":"En téléchargeant votre CV, vous acceptez notre",
+       "Privacy_policy":"Politique de confidentialité",
+       "upload_a_file":"Téléchargez Un Fichier",
+       "or_drag_drop":"Ou faites glisser et déposez",
+       "why_you_will_love":"Pourquoi Vous Allez Adorer Ce Poste",
+       "competitive_salary":"Salaire Compétitif Avec Des Bonus De Performance",
+       "flexible_working_hours":"Horaires De Travail Flexibles Et équilibre Entre Vie Professionnelle Et Personnelle",
+       "professional_development":"Opportunités De Développement Professionnel Et De Croissance",
+       "modern_salon":"Salon Moderne Avec Les équipements Premium Les Plus Récents",
+       "loyal_client_base":"Base De Clients Fidèles Et Environnement D'équipe Solidaire",
+       "promotion_ends":"La Promotion Se Termine",
+       "show_less":"Afficher Moins"
+       
       }
   }
   

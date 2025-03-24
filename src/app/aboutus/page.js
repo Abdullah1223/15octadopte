@@ -118,7 +118,7 @@
 //               <Zap size={60}  color="black" ></Zap>  
 //               <h1 className="text-2xl mt-5 w-full text-black font-bold">Simplicité & rapidité</h1>
 //               <p className="w-full mt-3">
-//               Un processus de mise en relation fluide et efficace, permettant aux barbiers de trouver des opportunités adaptées et aux employeurs de recruter facilement des talents qualifiés
+//               Un processus de mise en relation fluide et efficace, permettant aux coiffeur de trouver des opportunités adaptées et aux employeurs de recruter facilement des talents qualifiés
 //               </p>
 //             </div>
 
@@ -127,7 +127,7 @@
 //               <TargetIcon size={60}  color="black" ></TargetIcon>  
 //               <h1 className="text-2xl mt-5 w-full text-black font-bold">Ciblage précis</h1>
 //               <p className="w-full mt-3">
-//               Recevez des offres d'emploi adaptées à votre expérience et à vos préférences. Les employeurs trouvent rapidement les barbiers qualifiés correspondant à leurs besoins              </p>
+//               Recevez des offres d'emploi adaptées à votre expérience et à vos préférences. Les employeurs trouvent rapidement les coiffeur qualifiés correspondant à leurs besoins              </p>
 //             </div>
 //           </div>
 
@@ -136,14 +136,14 @@
 //               <HandshakeIcon size={60}  color="black" ></HandshakeIcon>  
 //               <h1 className="text-2xl mt-5 w-full text-black font-bold">Communauté engagée</h1>
 //               <p className="w-full mt-3">
-//               Rejoignez une communauté active de barbiers et d'employeurs partageant les mêmes valeurs. Échangez, collaborez et développez votre réseau professionnel en toute confiance.              </p>
+//               Rejoignez une communauté active de coiffeur et d'employeurs partageant les mêmes valeurs. Échangez, collaborez et développez votre réseau professionnel en toute confiance.              </p>
 //             </div>
 
 //             <div className="flex mt-12 pr-4 flex-col"> 
 //               <AlarmClock size={60}  color="black" ></AlarmClock>  
 //               <h1 className="text-2xl mt-5 w-full text-black font-bold">Accès en temps réel</h1>
 //               <p className="w-full mt-3">
-//               Consultez et postulez aux offres en temps réel, sans attendre. Les employeurs reçoivent instantanément les candidatures des barbiers qualifiés.              </p>
+//               Consultez et postulez aux offres en temps réel, sans attendre. Les employeurs reçoivent instantanément les candidatures des coiffeur qualifiés.              </p>
 //             </div>
 //           </div>
 
@@ -242,7 +242,7 @@ export default function Aboutus() {
             Bienvenue dans la première plateforme dédiée à la mise en relation entre coiffeurs et employeurs du secteur de la coiffure. Que vous soyez un salon en quête de talents ou un professionnel à la recherche d'opportunités, nous avons conçu un espace innovant pour répondre à vos besoins.
           </p>
           <button className="px-8 py-3 bg-[#FA4909] text-white font-medium rounded-full hover:bg-[#E43700] transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-1">
-            Let's Explore
+            {translate('Lets Explore')}
           </button>
         </div>
 
@@ -291,7 +291,7 @@ export default function Aboutus() {
               </div>
               <h3 className="text-2xl text-black font-bold mb-3">Simplicité & rapidité</h3>
               <p className="text-gray-600 leading-relaxed">
-                Un processus de mise en relation fluide et efficace, permettant aux barbiers de trouver des opportunités adaptées et aux employeurs de recruter facilement des talents qualifiés.
+                Un processus de mise en relation fluide et efficace, permettant aux coiffeur de trouver des opportunités adaptées et aux employeurs de recruter facilement des talents qualifiés.
               </p>
             </div>
 
@@ -301,7 +301,7 @@ export default function Aboutus() {
               </div>
               <h3 className="text-2xl text-black font-bold mb-3">Ciblage précis</h3>
               <p className="text-gray-600 leading-relaxed">
-                Recevez des offres d'emploi adaptées à votre expérience et à vos préférences. Les employeurs trouvent rapidement les barbiers qualifiés correspondant à leurs besoins.
+                Recevez des offres d'emploi adaptées à votre expérience et à vos préférences. Les employeurs trouvent rapidement les coiffeur qualifiés correspondant à leurs besoins.
               </p>
             </div>
           </div>
@@ -313,7 +313,7 @@ export default function Aboutus() {
               </div>
               <h3 className="text-2xl text-black font-bold mb-3">Communauté engagée</h3>
               <p className="text-gray-600 leading-relaxed">
-                Rejoignez une communauté active de barbiers et d'employeurs partageant les mêmes valeurs. Échangez, collaborez et développez votre réseau professionnel en toute confiance.
+                Rejoignez une communauté active de coiffeur et d'employeurs partageant les mêmes valeurs. Échangez, collaborez et développez votre réseau professionnel en toute confiance.
               </p>
             </div>
 
@@ -323,7 +323,7 @@ export default function Aboutus() {
               </div>
               <h3 className="text-2xl text-black font-bold mb-3">Accès en temps réel</h3>
               <p className="text-gray-600 leading-relaxed">
-                Consultez et postulez aux offres en temps réel, sans attendre. Les employeurs reçoivent instantanément les candidatures des barbiers qualifiés.
+                Consultez et postulez aux offres en temps réel, sans attendre. Les employeurs reçoivent instantanément les candidatures des coiffeur qualifiés.
               </p>
             </div>
           </div>

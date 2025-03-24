@@ -587,7 +587,7 @@ const EmployerView = ({ showFilters, setShowFilters }) => {
       role: translate('chief_barber'),
       location: 'Paris, France',
       experience: '5 years',
-      salary: '£50,000 - £65,000',
+      salary: '€50,000 - €65,000',
       contractType: translate('part_time'),
       skills: [translate('female_barber'),translate('color_expert')],
       languages: ['English (Native)', 'French (Basic)'],
@@ -738,9 +738,9 @@ const EmployerView = ({ showFilters, setShowFilters }) => {
                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
                   <div className="flex-1 min-w-0">
                     <h3 className="text-lg font-medium text-[#ff7300] truncate">{candidate.name}</h3>
-                    <p className="text-sm font-medium text-gray-900">
+                    {/* <p className="text-sm font-medium text-gray-900">
                       {candidate.role}
-                    </p>
+                    </p> */}
                   </div>
                   <div className="mt-3 sm:mt-0 sm:ml-4 flex-shrink-0 flex">
                     <button className="bg-white rounded-md font-medium text-orange-600 hover:text-indigo-500 focus:outline-none flex items-center">
@@ -758,10 +758,10 @@ const EmployerView = ({ showFilters, setShowFilters }) => {
                       <MapPin className="flex-shrink-0 mr-1.5 h-4 w-4 text-gray-400" />
                       {candidate.location}
                     </p>
-                    <p className="mt-2 sm:mt-0 sm:ml-6 flex items-center text-sm text-gray-500">
+                    {/* <p className="mt-2 sm:mt-0 sm:ml-6 flex items-center text-sm text-gray-500">
                       <Clock className="flex-shrink-0 mr-1.5 h-4 w-4 text-gray-400" />
                       {candidate.experience}
-                    </p>
+                    </p> */}
                     <p className="mt-2 sm:mt-0 sm:ml-6 flex items-center text-sm text-gray-500">
                       <Euro className="flex-shrink-0 mr-1.5 h-4 w-4 text-gray-400" />
                       {candidate.salary}
@@ -936,16 +936,16 @@ const CandidateView = () => {
                         htmlFor="file-upload"
                         className="relative cursor-pointer bg-white rounded-md font-medium text-orange-600 hover:text-orange-500 focus-within:outline-none"
                       >
-                        <span>Upload a file</span>
+                        <span>{translate('upload_a_file')}</span>
                         <input id="file-upload" name="file-upload" type="file" className="sr-only" />
                       </label>
-                      <p className="pl-1">or drag and drop</p>
+                      <p className="pl-1">{translate('or_drag_drop')}</p>
                     </div>
                     <p className="text-xs text-gray-500">PDF, DOC, DOCX, JPG up to 10MB</p>
                   </div>
                 </div>
                 <p className="mt-2 text-sm text-gray-500">
-                  By uploading your CV, you agree to our <a href="#" className="font-medium text-orange-600 hover:text-orange-500">Privacy Policy</a>.
+                  {translate('by_uploading')} <a href="#" className="font-medium text-orange-600 hover:text-orange-500">{translate('Privacy_policy')}</a>.
                 </p>
                 <div className="mt-5">
                   <button
@@ -953,7 +953,7 @@ const CandidateView = () => {
                     className="inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-orange-600 hover:bg-orange-700 focus:outline-none"
                   >
                     <Upload className="mr-2 h-4 w-4" />
-                    Upload CV
+                   {translate('upload_cv')}
                   </button>
                 </div>
               </div>

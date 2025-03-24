@@ -411,7 +411,7 @@ export default function Jobs() {
           <span className="text-gray-600">{translate('jobs_found_matching_your_criteria')}</span>
         </div>
         <div className="text-sm text-gray-500">
-          Updated today
+        Mis à Jour Aujourd'Hui
         </div>
       </motion.div>
 

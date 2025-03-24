@@ -51,10 +51,10 @@ const FeaturedJobCard = ({ job, index }) => {
               <MapPin size={16} className="mr-2 text-orange-400" />
               <span>{job.location}</span>
             </div>
-            <div className="flex items-center bg-white p-2 rounded-lg border border-orange-100">
+            {/* <div className="flex items-center bg-white p-2 rounded-lg border border-orange-100">
               <Clock size={16} className="mr-2 text-orange-400" />
               <span>{job.experience}</span>
-            </div>
+            </div> */}
             <div className="flex items-center bg-white p-2 rounded-lg border border-orange-100">
               <Euro size={16} className="mr-2 text-orange-400" />
               <span className="font-medium">{job.salary}</span>
@@ -97,14 +97,14 @@ const FeaturedJobCard = ({ job, index }) => {
                 transition={{ duration: 0.3 }}
                 className="mt-5 text-gray-700 border-t border-orange-200 pt-4"
               >
-                <h4 className="font-medium mb-3 text-orange-600">Why You'll Love This Role</h4>
+                <h4 className="font-medium mb-3 text-orange-600">{translate('why_you_will_love')}</h4>
                 <ul className="space-y-2">
                   {[
-                    "Competitive salary with performance bonuses",
-                    "Flexible working hours and work-life balance",
-                    "Professional development and growth opportunities",
-                    "Modern salon with the latest premium equipment",
-                    "Loyal client base and supportive team environment"
+                    translate('competitive_salary'),
+                    translate('flexible_working_hours'),
+                    translate('professional_development'),
+                    translate('modern_salon'),
+                    translate('loyal_client_base')
                   ].map((benefit, idx) => (
                     <li key={idx} className="flex items-start">
                       <div className="h-5 w-5 rounded-full bg-orange-100 flex items-center justify-center mr-2 mt-0.5">
@@ -121,13 +121,13 @@ const FeaturedJobCard = ({ job, index }) => {
           <div className="mt-5 flex justify-between items-center">
             <div className="flex items-center text-xs bg-orange-100 px-3 py-1 rounded-full text-orange-600">
               <AlertCircle size={12} className="mr-1" />
-              Promotion ends {job.promotionEnds}
+              {translate('promotion_ends')} {job.promotionEnds}
             </div>
             <button 
               onClick={() => setExpanded(!expanded)} 
               className="text-orange-600 flex items-center text-sm hover:text-orange-700 font-medium"
             >
-              {expanded ? 'Show less' : 'Show more'}
+              {expanded ? translate('show_less') : 'Show more'}
               <ChevronDown size={16} className={`ml-1 transform transition-transform ${expanded ? 'rotate-180' : ''}`} />
             </button>
           </div>
