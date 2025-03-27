@@ -132,7 +132,7 @@ return(
   )}
 </div>
 
-  <p onClick={()=>setisSignup(false)} className="self-center text-black mt-5">{translate('already_have_account')} <span className="text-[#ff7300] cursor-pointer hover:underline">Login</span></p>
+  <p onClick={()=>setisSignup(false)} className="self-center text-black mt-5">{translate('already_have_account')} <span className="text-[#ff7300] cursor-pointer hover:underline">{translate('login')}</span></p>
         {/* <Uploadfilecomponent title={"Please Upload A Cv"} acceptableformats={"Pdf"}></Uploadfilecomponent> */}
      <button className="self-center mt-5 h-10 text-white font-bold w-44 rounded-lg bg-[#ff3700]">{translate('sign_up')}</button>
       </div>
@@ -156,8 +156,8 @@ return(
                    <h1
 
                    onClick={()=>{setisSignup(true)}}
-                   className="self-center text-black cursor-pointer mt-4">{translate('dont_have_account')}<span className="text-[#ff7300]"> Signup</span> </h1>   
-                   <button className="w-44 h-10 self-center mt-6  bg-[#ff7300] text-white rounded-lg">Login</button>
+                   className="self-center text-black cursor-pointer mt-4">{translate('dont_have_account')}<span className="text-[#ff7300]"> {translate('sign_up')}</span> </h1>   
+                   <button className="w-44 h-10 self-center mt-6  bg-[#ff7300] text-white rounded-lg">{translate('login')}</button>
                   </div>
                 </div>
 )

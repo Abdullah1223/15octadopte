@@ -245,7 +245,15 @@
        "modern_salon":"Modern salon with the latest premium equipment",
        "loyal_client_base":"Loyal client base and supportive team environment",
        "promotion_ends":"Promotion Ends",
-       "show_less":"Show Less"
+       "show_less":"Show Less",
+       "faq_1":"How quickly will you respond to my inquiry?",
+       "faq_1_answer": "We typically respond to all inquiries within 24 hours during business days. For urgent matters, please indicate so in your message.",
+       "faq_2":"Can I schedule an appointment through this contact form?",
+       "faq_2_answer":"Yes, you can request an appointment through this form. Please include your preferred date and time in your message, and we'll confirm availability.",
+       "faq_3":"What information should I include in my message?",
+       "faq_3_answer":"Please include details about your specific needs, any relevant timeline information, and the best way to reach you. The more details you provide, the better we can assist you.",
+       "faq_4":"Do you offer emergency services?",
+       "faq_4_answer": "Yes, we do offer emergency services for certain situations. Please mark your message as urgent, and we'll prioritize your request accordingly."
       },
     "fr": {
       "welcome": "Bienvenue sur notre site",
@@ -462,11 +470,11 @@
        "us_for_about_us":"CHOISIR",
        "name":"Prénom",
        "last_name":"Nom",
-       "enter_email":"Veuillez Entrer Votre Email",
-       "enter_company_name":"Veuillez Entrer Le Nom De Votre Entreprise",
-       "enter_siret_num":"Veuillez Entrer Votre Numéro SIRET",
-       "enter_id":"Veuillez Entrer l'Identifiant",
-       "enter_password":"Veuillez Entrer Votre Mot De Passe",
+       "enter_email":"Please Enter Email",
+       "enter_company_name":"Nom Commercial",
+       "enter_siret_num":"Entrez le numéro SIRET",
+       "enter_id":"Veuillez Entrer Votre Identifiant",
+       "enter_password":"Mot De Passe",
        "upload_kibs":"Veuillez Deposer Le Document KIBS Récent",
        "upload_cv_login":"Veuillez Deposer Un CV",
        "upload_profile_pic":"Veuillez Deposer Une Photo De Profil",
@@ -492,7 +500,16 @@
        "modern_salon":"Salon Moderne Avec Les équipements Premium Les Plus Récents",
        "loyal_client_base":"Base De Clients Fidèles Et Environnement D'équipe Solidaire",
        "promotion_ends":"La Promotion Se Termine",
-       "show_less":"Afficher Moins"
+       "show_less":"Afficher Moins",
+       "faq_1":"À quelle vitesse répondrez-vous à ma demande ?",
+       "faq_1_answer":"Nous répondons généralement à toutes les demandes sous 24 heures les jours ouvrables. Pour les urgences, veuillez l’indiquer dans votre message.",
+       "faq_2":"Puis-je prendre rendez-vous via ce formulaire de contact ?",
+       "faq_2_answer":"Oui, vous pouvez demander un rendez-vous via ce formulaire. Veuillez indiquer votre date et heure préférées dans votre message, et nous vous confirmerons la disponibilité.",
+       "faq_3":"Quelles informations dois-je inclure dans mon message ?",
+       "faq_3_answer":"Veuillez inclure des détails sur vos besoins spécifiques, toute information pertinente sur le calendrier, ainsi que le meilleur moyen de vous contacter. Plus vous fournissez de détails, mieux nous pourrons vous aider.",
+       "faq_4":"Proposez-vous des services d'urgence ?",
+       "faq_4_answer":"Oui, nous proposons des services d'urgence pour certaines situations. Veuillez marquer votre message comme urgent, et nous prioriserons votre demande en conséquence."
+       
        
       }
   }

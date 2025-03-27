@@ -121,20 +121,20 @@ export default function Contactus() {
 
   const faqs = [
     {
-      question: "How quickly will you respond to my inquiry?",
-      answer: "We typically respond to all inquiries within 24 hours during business days. For urgent matters, please indicate so in your message."
+      question: translate('faq_1'),
+      answer: translate('faq_1_answer') 
+       },
+    {
+      question: translate('faq_2'),
+      answer:  translate('faq_2_answer')
     },
     {
-      question: "Can I schedule an appointment through this contact form?",
-      answer: "Yes, you can request an appointment through this form. Please include your preferred date and time in your message, and we'll confirm availability."
+      question:translate('faq_3'),
+      answer:  translate('faq_3_answer')
     },
     {
-      question: "What information should I include in my message?",
-      answer: "Please include details about your specific needs, any relevant timeline information, and the best way to reach you. The more details you provide, the better we can assist you."
-    },
-    {
-      question: "Do you offer emergency services?",
-      answer: "Yes, we do offer emergency services for certain situations. Please mark your message as urgent, and we'll prioritize your request accordingly."
+      question: translate('faq_4'),
+      answer:translate('faq_4_answer')
     }
   ];
 
