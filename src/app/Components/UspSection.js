@@ -12,7 +12,7 @@ const UspSection = ()=>{
         },
         {
           title:translate('Usp_2'),
-          subheading:'Discover jobs near you or hire talent in your area',
+          subheading:translate('Usp_2_subheading'),
           image:'/location-pin.png'
         },
         {
@@ -40,7 +40,7 @@ return (
           alt="Thunder"></Image>
           <div className="flex flex-col  ">
             <h1 className="md:text-base  lg:text-lg xl:text-xl font-bold">{data.title}</h1>
-            <p className="lg:text-xs  text-nowrap text-xs" >{data.subheading}</p>
+            <p className={`lg:text-xs ${language=='fr' && index==1?'text-wrap':'text-nowrap'}  text-xs`} >{data.subheading}</p>
             
           </div>
         </div>  
