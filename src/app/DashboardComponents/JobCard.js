@@ -83,7 +83,7 @@ const JobCard = ({ job }) => {
         <div className="flex items-center self-start sm:self-auto">
           <button className="flex items-center mr-2 text-orange-500">
             <Bookmark size={18} className="mr-1" />
-            <span className="hidden sm:inline">Save</span>
+            <span className="hidden sm:inline">{translate('save_jobs')}</span>
           </button>
           <button className="px-4 py-1 bg-orange-100 text-orange-500 rounded hover:bg-orange-200 transition-colors">
             {translate('views_jobs')}

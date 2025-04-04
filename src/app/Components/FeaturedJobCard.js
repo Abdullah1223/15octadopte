@@ -34,7 +34,7 @@ const FeaturedJobCard = ({ job, index }) => {
                 className="flex items-center text-orange-500 hover:text-orange-600 bg-white px-3 py-1 rounded-full border border-orange-200 shadow-sm"
               >
                 <Bookmark size={16} className="mr-1" />
-                <span className="text-sm font-medium">Save</span>
+                <span className="text-sm font-medium">{translate('save_jobs')}</span>
               </motion.button>
               <motion.button 
                 whileHover={{ scale: 1.05 }}
@@ -127,7 +127,7 @@ const FeaturedJobCard = ({ job, index }) => {
               onClick={() => setExpanded(!expanded)} 
               className="text-orange-600 flex items-center text-sm hover:text-orange-700 font-medium"
             >
-              {expanded ? translate('show_less') : 'Show more'}
+              {expanded ? translate('show_less') : translate('show_more')}
               <ChevronDown size={16} className={`ml-1 transform transition-transform ${expanded ? 'rotate-180' : ''}`} />
             </button>
           </div>
