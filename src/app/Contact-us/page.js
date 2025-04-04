@@ -175,14 +175,14 @@ export default function Contactus() {
                     <div className="animate-fade-in" style={{ animationDelay: "0.4s" }}>
                       <input 
                         type="text" 
-                        placeholder="First Name" 
+                        placeholder={translate('name')}
                         className="w-full bg-gray-100 px-4 py-3 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-400 transition" 
                       />
                     </div>
                     <div className="animate-fade-in" style={{ animationDelay: "0.5s" }}>
                       <input 
                         type="text" 
-                        placeholder="Last Name" 
+                        placeholder={translate('last_name')}
                         className="w-full bg-gray-100 px-4 py-3 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-400 transition" 
                       />
                     </div>
@@ -191,14 +191,14 @@ export default function Contactus() {
                   <div className="mb-4 animate-fade-in" style={{ animationDelay: "0.6s" }}>
                     <input 
                       type="email" 
-                      placeholder="Email Address" 
+                      placeholder={translate('enter_email')}
                       className="w-full bg-gray-100 px-4 py-3 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-400 transition" 
                     />
                   </div>
                   
                   <div className="mb-6 animate-fade-in" style={{ animationDelay: "0.7s" }}>
                     <textarea 
-                      placeholder="Your Message" 
+                      placeholder={translate('your_message')}
                       rows="5"
                       className="w-full bg-gray-100 px-4 py-3 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-400 transition resize-none" 
                     ></textarea>
@@ -208,7 +208,7 @@ export default function Contactus() {
                     type="submit"
                     className="w-full bg-orange-500 text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:bg-orange-600 transition duration-300 transform hover:scale-[1.02] animate-bounce-subtle"
                   >
-                    Get In Touch
+                    {translate('get_in_touch')}
                   </button>
                 </form>
               </div>

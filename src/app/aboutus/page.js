@@ -192,7 +192,7 @@ export default function Aboutus() {
     },
     {
       title: 'Liste Instantanée',
-      subheading: 'Publiez vos offres d emploi en quelques clics.',
+      subheading: 'Publiez vos offres d emplois en quelques clics.',
       icon: FileText
     },
     {
@@ -202,7 +202,7 @@ export default function Aboutus() {
     },
     {
       title: "Recherche d'opportunités",
-      subheading: "Découvrez des opportunités d'emploi qui correspondent à votre profil et à vos attentes.",
+      subheading: "Découvrez des opportunités d'emplois qui correspondent à votre profil et à vos attentes.",
       icon: Scissors
     },
     {
@@ -242,7 +242,7 @@ export default function Aboutus() {
             Bienvenue dans la première plateforme dédiée à la mise en relation entre coiffeurs et employeurs du secteur de la coiffure. Que vous soyez un salon en quête de talents ou un professionnel à la recherche d'opportunités, nous avons conçu un espace innovant pour répondre à vos besoins.
           </p>
           <button className="px-8 py-3 bg-[#FA4909] text-white font-medium rounded-full hover:bg-[#E43700] transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-1">
-            {translate('Lets Explore')}
+            {translate('Lets_Explore_About_Us')}
           </button>
         </div>
 
@@ -291,7 +291,7 @@ export default function Aboutus() {
               </div>
               <h3 className="text-2xl text-black font-bold mb-3">Simplicité & rapidité</h3>
               <p className="text-gray-600 leading-relaxed">
-                Un processus de mise en relation fluide et efficace, permettant aux coiffeur de trouver des opportunités adaptées et aux employeurs de recruter facilement des talents qualifiés.
+                Un processus de mise en relation fluide et efficace, permettant aux coiffeurs de trouver des opportunités adaptées et aux employeurs de recruter facilement des talents qualifiés.
               </p>
             </div>
 
@@ -301,7 +301,7 @@ export default function Aboutus() {
               </div>
               <h3 className="text-2xl text-black font-bold mb-3">Ciblage précis</h3>
               <p className="text-gray-600 leading-relaxed">
-                Recevez des offres d'emploi adaptées à votre expérience et à vos préférences. Les employeurs trouvent rapidement les coiffeur qualifiés correspondant à leurs besoins.
+                Recevez des offres D'emplois adaptées à votre expérience et à vos préférences. Les employeurs trouvent rapidement les coiffeurs qualifiés correspondant à leurs besoins.
               </p>
             </div>
           </div>
