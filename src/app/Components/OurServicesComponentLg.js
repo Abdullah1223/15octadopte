@@ -37,7 +37,7 @@ return (
         </div> 
     
 
-        <button className="absolute md:top-[89%]  animate-[bounce_2s] lg:top-[90%]  w-64 h-12 hover:bg-[#ff3700] border border-black text-black hover:text-white hover:border-0 ">
+        <button className="absolute md:top-[89%]  animate-[bounce_2s] lg:top-[76%]  w-64 h-12 hover:bg-[#ff3700] border border-black text-black hover:text-white hover:border-0 ">
           {translate('Lets Explore')}
         </button>
       

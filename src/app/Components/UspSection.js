@@ -30,7 +30,7 @@ const UspSection = ()=>{
     ]
 return (
     
-    <div className="hidden px-8 md:grid md:grid-cols-2 bg-[#F9F7F7] xl:flex justify-evenly items-center pt-3">
+    <div className="hidden px-8 md:grid md:grid-cols-2 bg-[#F9F7F7]  pt-3">
       
       {
         ValueSection.map((data,index)=>{
