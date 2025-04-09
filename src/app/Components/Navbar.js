@@ -200,7 +200,11 @@ const Navbar = () => {
         </div>
 
         <button onClick={() => { router.push('/login') }} className="bg-[#FF7300] hidden text-white hover:bg-[#FF9522] md:block lg:text-[18px] text-[12px] w-32 h-9 lg:w-52 lg:h-10 rounded-[5px]">
+          <div className="flex justify-center gap-3 items-center">
           {translate('Get Hired')}
+          <LogIn className="w-4 h-4 lg:w-5 lg:h-5 mt-0" />
+          </div>
+          
         </button>
 
         <div className="flex items-center gap-3 md:hidden">
