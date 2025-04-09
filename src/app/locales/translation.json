@@ -63,7 +63,7 @@
        "problem_solved_subheading":"Congratulations! Your problem is fixed and you're ready to enjoy our services.",
        "frequently_asked":"Frequently Asked",
        "frequently_asked_subheading":"Find answers to common questions about our services and contact process.",
-       "cv_search_&_filtering":"Cv Search & Filtering",
+       "cv_search_&_filtering":"Your Hairdressing Job Just A Click Away",
        "upgrade_to_premium":"Upgrade To Premium",
        "for_employers":"For Employers",
        "for_candidates":"For Candidates",
@@ -262,7 +262,10 @@
        "Talent":"TALENT",
        "meets":"MEETS",
        "Opportunities":"OPPORTUNITIES",
-       "get_in_touch":"Get In Touch"
+       "get_in_touch":"Get In Touch",
+       "select_region":"Select Region",
+       "enter_telephone":"Enter Telephone",
+       "select_candidate_type":"Select Candidate Type"
       },
     "fr": {
       "welcome": "Bienvenue sur notre site",
@@ -329,7 +332,7 @@
       "problem_solved_subheading":"Nous vous apportons une solution  a votre demande afin de profiter pleinement de nos services.",
       "frequently_asked":"Questions fréquemment posées",
       "frequently_asked_subheading":"Trouvez des réponses aux questions courantes sur nos services et notre processus de contact.",
-      "cv_search_&_filtering":"Recherche et filtrage de CV",
+      "cv_search_&_filtering":"Votre Job De Coiffure à Portée De Clic",
       "upgrade_to_premium":"Passez à la version premium",
       "for_employers":"Pour les employeurs",
       "for_candidates":"Pour les candidats",
@@ -526,7 +529,10 @@
        "Talent":"TALENT",
        "meets":"RENCONTRER",
        "Opportunities":"OPPORTUNITÉS",
-       "get_in_touch":"Envoyer"
+       "get_in_touch":"Envoyer",
+       "select_region":"Sélection De La Région",
+       "enter_telephone":"Entrez votre numéro de téléphone",
+       "select_candidate_type":"Type de candidat"
        
       }
   }
