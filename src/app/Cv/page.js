@@ -708,7 +708,7 @@ const EmployerView = ({ showFilters, setShowFilters }) => {
                   <input
                     type="text"
                     className="focus:ring-indigo-500 focus:border-indigo-500 block w-full pl-10 sm:text-sm border-gray-300 rounded-md"
-                    placeholder="Any location"
+                    placeholder="tout type d'emplacement"
                   />
                 </div>
               </div>
@@ -739,7 +739,7 @@ const EmployerView = ({ showFilters, setShowFilters }) => {
               <div>
                 <label className="block text-sm font-medium text-gray-700">{translate('contract_type')}</label>
                 <select className="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md">
-                  <option>Any Type</option>
+                  <option>Tout Type</option>
                   <option>{translate('full_time')}</option>
                   <option>{translate('part_time')}</option>
                   <option>{translate('contract')}</option>
@@ -762,7 +762,7 @@ const EmployerView = ({ showFilters, setShowFilters }) => {
               <div>
                 <label className="block text-sm font-medium text-gray-700">{translate('experience_level')}</label>
                 <select className="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md">
-                  <option>Any Experience</option>
+                  <option>Aucune Experience</option>
                   <option>Entry Level (0-2 years)</option>
                   <option>Mid Level (3-5 years)</option>
                   <option>Senior (6-9 years)</option>
@@ -779,22 +779,22 @@ const EmployerView = ({ showFilters, setShowFilters }) => {
                 </select>
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700">Last Active</label>
+                <label className="block text-sm font-medium text-gray-700">Dernière Publication</label>
                 <select className="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md">
                   <option>Any Time</option>
-                  <option>Today</option>
-                  <option>Last 3 days</option>
-                  <option>Last week</option>
-                  <option>Last month</option>
+                  <option>Aujourd’Hui</option>
+                  <option>Il Y A 3 Jours</option>
+                  <option>La Semaine Dernière</option>
+                  <option>Il Y A Un Mois</option>
                 </select>
               </div>
             </div>
             <div className="mt-4 flex justify-end">
               <button className="mr-3 px-4 py-2 text-sm font-medium text-gray-700 hover:text-gray-500">
-                Clear All
+                {translate('clear')}
               </button>
               <button className="px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700">
-                Apply Filters
+                {translate('apply_filters')}
               </button>
             </div>
           </div>

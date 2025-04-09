@@ -306,7 +306,8 @@ const LoginCard = ()=>{
     "Coiffeur Enfant", // Children's hairdresser
     "Styliste", // Hair stylist
     "Technicien", // Technical specialist
-    "Apprenti" // Apprentice
+    "Apprenti", // Apprentice
+    "Alternant"
   ]
   
   const handleFileChange = (event) => {

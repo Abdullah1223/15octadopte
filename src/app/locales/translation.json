@@ -266,7 +266,8 @@
        "select_region":"Select Region",
        "enter_telephone":"Enter Telephone",
        "select_candidate_type":"Select Candidate Type",
-       "select_your_profile":"Select Your Profile"
+       "select_your_profile":"Select Your Profile",
+       "clear":"Clear All"
       },
     "fr": {
       "welcome": "Bienvenue sur notre site",
@@ -464,7 +465,7 @@
        "bridal":"Mariage",
        "hair_extensions":"Extensions de cheveux",
        "color_expert":"Expert en coloration",
-       "apply_filters":"Appliquer les filtres",
+       "apply_filters":"Appliquer filtres",
        "reset_all":"Réinitialiser tout",
        "any_location":"Tous emplacements",
        "any_type":"Tout type",
@@ -534,7 +535,9 @@
        "select_region":"Sélection De La Région",
        "enter_telephone":"Veuillez Rajouter Un Numero De Telephone",
        "select_candidate_type":"Type de candidat",
-       "select_your_profile":"Veuillez Selectionner Votre Profile"
+       "select_your_profile":"Veuillez Sélectionner Vôtre Profil",
+       "clear":"effacer tout"
+      
        
       }
   }
