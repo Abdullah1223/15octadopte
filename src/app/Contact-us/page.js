@@ -392,12 +392,19 @@ export default function Contactus() {
                     />
                   </div>
                   
+                  <div className="mb-4 animate-fade-in" style={{ animationDelay: "0.6s" }}>
+                    <input 
+                      type="email" 
+                      placeholder={translate('enter_telephone')}
+                      className="w-full bg-gray-100 px-4 py-3 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-400 transition" 
+                    />
+                  </div>
                   {/* Added Dropdown Menu */}
                   <div className="mb-4 animate-fade-in" style={{ animationDelay: "0.65s" }}>
                     <select 
                       className="w-full bg-gray-100 px-4 py-3 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-400 transition appearance-none"
                     >
-                      <option className="text-gray-300" value="" disabled selected>{translate('select your profile')}</option>
+                      <option className="text-gray-300" value="" disabled selected>{translate('select_your_profile')}</option>
                       <option value="employeurs">{translate('employeurs')}</option>
                       <option value="candidat">{translate('candidat')}</option>
                       <option value="autre">{translate('autre')}</option>

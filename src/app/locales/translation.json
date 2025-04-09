@@ -265,7 +265,8 @@
        "get_in_touch":"Get In Touch",
        "select_region":"Select Region",
        "enter_telephone":"Enter Telephone",
-       "select_candidate_type":"Select Candidate Type"
+       "select_candidate_type":"Select Candidate Type",
+       "select_your_profile":"Select Your Profile"
       },
     "fr": {
       "welcome": "Bienvenue sur notre site",
@@ -527,12 +528,13 @@
        "your_message":"Votre Message",
        "where":"Où",
        "Talent":"TALENT",
-       "meets":"RENCONTRER",
+       "meets":"RENCONTRE LES",
        "Opportunities":"OPPORTUNITÉS",
        "get_in_touch":"Envoyer",
        "select_region":"Sélection De La Région",
-       "enter_telephone":"Entrez votre numéro de téléphone",
-       "select_candidate_type":"Type de candidat"
+       "enter_telephone":"Veuillez Rajouter Un Numero De Telephone",
+       "select_candidate_type":"Type de candidat",
+       "select_your_profile":"Veuillez Selectionner Votre Profile"
        
       }
   }
