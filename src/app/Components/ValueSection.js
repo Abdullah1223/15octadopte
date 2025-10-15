@@ -1,3 +1,4 @@
+'use client';
 import Image from "next/image"
 import { inView, useInView } from "react-intersection-observer"
 import { useTranslation } from "../Context/TranslationContext.";
@@ -61,7 +62,9 @@ const ValueSection = ()=>{
         </div>
        </div>
       
-       <button className={` lg:hidden   ${language=='fr'?"w-56 sm:w-72":"w-44 sm:w-64"} sm:mt-10  mb-4 sm:text-lg text-sm text-white  rounded-sm font-bold text-center h-10 bg-[#ff7300]`}>{translate('Sign Up For Free')}</button>
+       <button 
+       onClick={()=>{router.push('/login')}}
+       className={` lg:hidden   ${language=='fr'?"w-56 sm:w-72":"w-44 sm:w-64"} sm:mt-10  mb-4 sm:text-lg text-sm text-white  rounded-sm font-bold text-center h-10 bg-[#ff7300]`}>{translate('Sign Up For Free')}</button>
 
 
       </div> 

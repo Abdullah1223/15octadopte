@@ -1,3 +1,4 @@
+'use client'
 import TestomonialSliderBox from "./TestomonialSliderBox";
 import {Swiper,SwiperSlide} from "swiper/react";
 import Image from "next/image";
@@ -28,8 +29,8 @@ const Testomonial = ()=>{
         <div className="flex absolute top-[10.1rem] ml-9 items-center ">
           {
             ImagesForTestimonial.map((Images,index)=>{
-              console.log(Images)
-              return <Image width={45} height={45} alt="Stars" src={`/${Images}`}>
+              
+              return <Image key={index} width={45} height={45} alt="Stars" src={`/${Images}`}>
                
               </Image>
             })

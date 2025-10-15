@@ -1,3 +1,4 @@
+'use client'
 import Image from "next/image"
 import { useInView } from "react-intersection-observer"
 import { useTranslation } from "../Context/TranslationContext.";
@@ -13,25 +14,25 @@ return (
       </div>
  <div ref={ref} className="w-full hidden md:flex flex-col relative  md:h-[46rem] lg:h-[58rem]  bg-[#FAE1C0] items-center" >
        <div  className={`flex  absolute md:top-[4%] lg:top-20 md:left-[5%] ${inView?"animate-[slideDown_1s]":"opacity-0"}  lg:left-[8%] xl:left-[12%] flex-col  w-[10.2rem] h-[10.2rem] lg:w-[12rem] lg:h-[12rem]`}>
-       <div className="self-center mt-2"> <Image src={'/magnifying-glass.png'} width={40} height={40}></Image></div>
+       <div className="self-center mt-2"> <Image alt="our service image" src={'/magnifying-glass.png'} width={40} height={40}></Image></div>
         <h1 className="md:text-xl lg:text-2xl md:mt-1 lg:mt-4 font-bold text-center">{translate('Jobs')}</h1> 
         <h1 className="break-words md:p-1 md:text-xs lg:text-sm lg:p-1  text-center">{translate('Jobs_subheading')}</h1>
         </div>
          
         <div className={`flex absolute  top-20 md:top-[4%] md:right-[8%] lg:right-[9%]  xl:right-[12%] ${inView?"animate-[slideDown_1s]":"opacity-0"}   flex-col  w-[10.2rem] h-[10.2rem] lg:w-[12rem] lg:h-[12rem] `}>
-        <div className="self-center mt-2"> <Image src={'/suitcase.png'} width={35} height={35}></Image></div>
+        <div className="self-center mt-2"> <Image alt="our service image" src={'/suitcase.png'} width={35} height={35}></Image></div>
         <h1 className="md:text-xl lg:text-2xl md:mt-1 lg:mt-4 font-bold text-center">{translate('platform_to_hire_talent')}</h1> 
         <h1 className="break-words md:p-1 md:text-xs lg:text-sm lg:p-1   mt-1 text-center">{translate('platform_to_hire_talent_subheading')}</h1>
         
         </div> 
         <div className={`flex absolute  top-80 md:top-[34%] lg:top-[33%] xl:top-[33%] md:right-[8%]  lg:right-[9%]  xl:right-[12%] ${inView?"animate-[slideDown_1s]":"opacity-0"}  flex-col  w-[10.2rem] h-[10.2rem] lg:w-[12rem] lg:h-[12rem] `}>
-        <div className="self-center mt-2"> <Image src={'/verify.png'} width={35} height={35}></Image></div>
+        <div className="self-center mt-2"> <Image alt="our service image" src={'/verify.png'} width={35} height={35}></Image></div>
         <h1 className="md:text-xl lg:text-2xl md:mt-1 lg:mt-4 font-bold text-center">{translate("verified_&_secure")}</h1> 
         <h1 className="break-words md:p-1 md:text-xs lg:text-sm lg:p-1   mt-1 text-center">{translate("verified_&_secure_subheading")}</h1>
         
         </div>  
         <div className={`flex absolute  md:top-[34%] lg:top-80 md:left-[5%] lg:left-[8%] xl:left-[12%] ${inView?"animate-[slideDown_1s]":"opacity-0"}  flex-col w-[10.2rem] h-[10.2rem] lg:w-[12rem] lg:h-[12rem] `}>
-        <div className="self-center mt-2"> <Image src={'/verify.png'} width={35} height={35}></Image></div>
+        <div className="self-center mt-2"> <Image alt="our service image" src={'/verify.png'} width={35} height={35}></Image></div>
         <h1 className="md:text-xl lg:text-2xl md:mt-1 lg:mt-4 font-bold text-center">{translate('talent_above_all')}</h1> 
         <h1 className="break-words md:p-1 md:text-xs lg:text-sm lg:p-1   mt-1 text-center">{translate('talent_above_all_subheading')}</h1>
         </div> 
