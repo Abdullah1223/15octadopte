@@ -78,6 +78,7 @@ export const fetchingJobs = async(
       headers:{
           'Content-Type':"application/json"
         },
+        method:"POST",
         body:JSON.stringify({cursorRegular,cursorPromoted,prevDocsRegular,prevDocsPromoted}),
     } )
     
