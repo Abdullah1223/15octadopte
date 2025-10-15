@@ -11,6 +11,7 @@ import { JobAdError, JobFetchErrorServer, } from '../ErrorMessages/errorMessages
 import useJobs from '../Hooks/useJobs';
 import ConditionalHits from './JobsConditionHits';
 import { JobsList } from './JobList';
+import Footer from './Footer';
 
 
 function Header (){
@@ -123,7 +124,7 @@ const HairdressingJobPortal = ({propjobs,propCursorRegular,propCursorPromoted,pr
       </InstantSearch>
        
       <JobsList jobs={jobs} isLoading={isLoading} ref={ref} />
-    
+       <Footer></Footer>
     </main>
     </>
 
