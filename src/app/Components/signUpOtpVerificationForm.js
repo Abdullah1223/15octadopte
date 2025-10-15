@@ -45,7 +45,7 @@ const OtpForm = ({
   const verifyOtp = async (code) => {
     
     try {
-      const response = await fetch('http://localhost:8001/otpVerification', {
+      const response = await fetch('https://adopte.gotdns.ch/api1/otpVerification', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

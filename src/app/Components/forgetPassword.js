@@ -87,7 +87,7 @@ const ForgotPasswordForm = ({ onSuccess }) => {
     setApiErrors({});
     
     try {
-      const response = await fetch('http://localhost:8001/sendResetCode', {
+      const response = await fetch('https://adopte.gotdns.ch/api1/sendResetCode', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -134,7 +134,7 @@ const ForgotPasswordForm = ({ onSuccess }) => {
     setApiErrors({});
     
     try {
-      const response = await fetch('http://localhost:8001/verifyForgetPasswordCode', {
+      const response = await fetch('https://adopte.gotdns.ch/api1/verifyForgetPasswordCode', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -184,7 +184,7 @@ const ForgotPasswordForm = ({ onSuccess }) => {
     setApiErrors({});
     
     try {
-      const response = await fetch('http://localhost:8001/forgetPassword', {
+      const response = await fetch('https://adopte.gotdns.ch/api1/forgetPassword', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

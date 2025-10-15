@@ -26,7 +26,7 @@
 //   const fetchingUser = useCallback(async () => {
 //     console.log('Fetching User Call - Actual API call');
 //     try {
-//       const response = await fetch(`http://localhost:8001/user/fetch/userInfo/${userId}`, {
+//       const response = await fetch(`https://adopte.gotdns.ch/api1/user/fetch/userInfo/${userId}`, {
 //         headers: {
 //           'Content-Type': "application/json"
 //         },
@@ -82,7 +82,7 @@
 //       // Optimistic update
 //       setIsFollowed(prev => !prev);
       
-//       const followReq = await fetch('http://localhost:8001/user/follow', {
+//       const followReq = await fetch('https://adopte.gotdns.ch/api1/user/follow', {
 //         headers: {
 //           'Content-Type': "application/json"
 //         },

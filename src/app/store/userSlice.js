@@ -11,7 +11,7 @@
 //     },
 //     reducers:{
 //         checkinUser:async(state,actions)=>{
-//            const response = await fetch('http://localhost:8001/checkingForUser',{
+//            const response = await fetch('https://adopte.gotdns.ch/api1/checkingForUser',{
 //             headers:{
 //                 'Content-Type':'application/json'
 //             },

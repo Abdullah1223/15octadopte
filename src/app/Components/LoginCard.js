@@ -348,7 +348,7 @@ const LoginCard = () => {
         };
       }
       
-      const response = await fetch('http://localhost:8001/SignUp', {
+      const response = await fetch('https://adopte.gotdns.ch/api1/SignUp', {
         headers: {
           'Content-Type': 'application/json'
         },
@@ -520,7 +520,7 @@ const LoginCard = () => {
     loginData
    }
     try {
-      const response = await fetch('http://localhost:8001/login', {
+      const response = await fetch('https://adopte.gotdns.ch/api1/login', {
         headers: {
           'Content-Type': 'application/json'
         },

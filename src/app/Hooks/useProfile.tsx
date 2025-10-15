@@ -170,7 +170,7 @@ export default function useProfile():useProfileInterface{
       } else {
       //   // Send to backend
       //   // console.log(editingField)
-      // const updatedVals = await fetch('http://localhost:8001/update/user/userProfile', {
+      // const updatedVals = await fetch('https://adopte.gotdns.ch/api1/update/user/userProfile', {
       //     method: 'PUT',
       //     headers: { 'Content-Type': 'application/json' },
       //     body: JSON.stringify({ 

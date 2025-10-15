@@ -27,7 +27,7 @@
 //       setEmailAddress(email);
       
 //       // Call backend API to verify email
-//       const response = await fetch('http://localhost:8001/verifyUser-email', {
+//       const response = await fetch('https://adopte.gotdns.ch/api1/verifyUser-email', {
 //         method: 'POST',
 //         headers: { 'Content-Type': 'application/json' },
 //         body: JSON.stringify({ email })
@@ -62,7 +62,7 @@
 //     try {
 //       // 1. Format file metadata for backend request
 //       const filesMeta = formatFileMetadata(files);
-//       const response = await fetch(`http://localhost:8001/verifyUser-files`,{
+//       const response = await fetch(`https://adopte.gotdns.ch/api1/verifyUser-files`,{
 //         headers:{
 //           'Content-Type':"application/json"
 //         },
@@ -103,7 +103,7 @@
 //   const handleOtpSubmit = async (otp) => {
 //     try {
 //       // Verify OTP with backend
-//       const response = await fetch('http://localhost:8001/otpVerification', {
+//       const response = await fetch('https://adopte.gotdns.ch/api1/otpVerification', {
 //         method: 'POST',
 //         headers: { 'Content-Type': 'application/json' },
 //         body: JSON.stringify({ 
