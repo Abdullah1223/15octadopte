@@ -61,9 +61,11 @@ export default async function JobsPage(){
 
   try{
     const response = await fetchingJobs(null,null,null,null)
+    console.log('job ran',response)
     // console.log('fetchib JObs response on call',response)
     if(response.status==200){
-      const result = await response.data
+      console.log('job response sucessfull',response)
+      const result = await response.json()
       
        jobs = result.jobs;
        propCursorRegular=result.lastCursorRegular
@@ -75,6 +77,7 @@ export default async function JobsPage(){
       isJobError=true
     }
   }catch(err){
+    console.log('job error came',err)
     console.log('err' , err)
     jobs = [];
     propCursorRegular=null

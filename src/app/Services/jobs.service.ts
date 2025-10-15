@@ -71,9 +71,9 @@ export const fetchingJobs = async(
   
 
 )=>{
-    const jobUrl = process.env.NEXT_PUBLIC_JOB_SERVICE      
+    const newjobUrl = process.env.JOB_SERVICE      
    try{
-    const response = await fetch(`${jobUrl}/mainJobs/get/jobs`,
+    const response = await fetch(`${newjobUrl}/mainJobs/get/jobs`,
       {  
       headers:{
           'Content-Type':"application/json"
