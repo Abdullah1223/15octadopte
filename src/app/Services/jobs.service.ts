@@ -73,7 +73,7 @@ export const fetchingJobs = async(
 )=>{
     const jobUrl = process.env.NEXT_PUBLIC_JOB_SERVICE      
    try{
-    const response = await fetch(`${jobUrl}/fetch/jobs`,
+    const response = await fetch(`${jobUrl}/mainJobs/get/jobs`,
       {  
       headers:{
           'Content-Type':"application/json"
@@ -87,6 +87,7 @@ export const fetchingJobs = async(
        return response;
 
        }catch(err){
+        console.log('err')
         throw Error('Error fetching jobs from server')
        } 
     }
