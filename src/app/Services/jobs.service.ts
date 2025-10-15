@@ -73,12 +73,14 @@ export const fetchingJobs = async(
 )=>{
     const jobUrl = process.env.NEXT_PUBLIC_JOB_SERVICE      
    try{
-    const response = await jobInstance.post(`/fetch/jobs`,
-        // headers:{
-        //   'Content-Type':"application/json"
-        // },
-         {cursorRegular,cursorPromoted,prevDocsRegular,prevDocsPromoted},
-      )
+    const response = await fetch(`${jobUrl}/fetch/jobs`,
+      {  
+      headers:{
+          'Content-Type':"application/json"
+        },
+        body:JSON.stringify({cursorRegular,cursorPromoted,prevDocsRegular,prevDocsPromoted}),
+    } )
+    
         // console.log('jobInstance',jobInstance.request)
     
       //  console.log('fetching jobs response before call) 
