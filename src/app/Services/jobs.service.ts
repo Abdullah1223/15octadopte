@@ -8,6 +8,7 @@ export const jobInstance  = axios.create({
   withCredentials:true
 })
 
+console.log('process.envpublicone' , jobUrl)
 // let isRefreshing=false;
 // let failedQueue:any[]=[];
 
@@ -71,7 +72,8 @@ export const fetchingJobs = async(
   
 
 )=>{
-    const newjobUrl = process.env.JOB_SERVICE      
+    const newjobUrl = process.env.JOB_SERVICE
+    console.log('newJObUrl',newjobUrl)      
    try{
     const response = await fetch(`${newjobUrl}/mainJobs/get/jobs`,
       {  

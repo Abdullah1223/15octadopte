@@ -48,7 +48,7 @@ export default function useJobs():useJobsInterface{
         
        setIsLoading(true)        
       const response = await fetchingJobs(cursorRegular,cursorPromoted,prevDocsRegular,prevDocsPromoted);  
-    const result = await response.data;
+    const result = await response.json();
     console.log(result)
    if(response.status==200){
     setIsLoading(false)
