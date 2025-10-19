@@ -14,7 +14,7 @@ export default async function  Ads({params}){
      let responseCode;
      let errorData;
      let loading=true;
-    const response = await fetch(`https://adopte.gotdns.ch/api8/adsRedirect/${adId}`,{
+    const response = await fetch(`${process.env.AD_SERVICE}/adsRedirect/${adId}`,{
        headers:{'Content-Type':'application/json',  Cookie:`token=${token?.value}`},
        method:"GET",
        credentials:"include",

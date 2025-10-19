@@ -36,7 +36,7 @@ import { useEffect } from "react";
 
 const AdsFetchCall = async(token,Cursor,excludeDocsIds)=>{
          
-    const response =  await fetch('https://adopte.gotdns.ch/api8/adsMetricDasboard/fetch/ads',{
+    const response =  await fetch(`${process.env.AD_SERVICE}/adsMetricDasboard/fetch/ads`,{
          headers:{
              'Content-Type':"application/json",
                Cookie:`token=${token?.value}`

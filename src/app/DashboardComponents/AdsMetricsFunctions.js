@@ -14,7 +14,7 @@ export const AdsMetricsApiService = {
     // Fetch all ads
     fetchAds: async (Cursor,excludeDocsIds) => {
       try {
-        const response = await fetch('https://adopte.gotdns.ch/api8/adsMetricDasboard/fetch/ads',{
+        const response = await fetch(`${process.env.AD_SERVICE}/adsMetricDasboard/fetch/ads`,{
           headers:{
             'Content-Type':'application/json',
           },
@@ -42,7 +42,7 @@ export const AdsMetricsApiService = {
     fetchAdData: async (adId, date,weekNumber) => {
       console.log(weekNumber)
       try {
-        const response = await fetch(`https://adopte.gotdns.ch/api8/Ads/Fetch/Metrics/ByDate/${adId}/${date}`,{
+        const response = await fetch(`${process.env.AD_SERVICE}/Ads/Fetch/Metrics/ByDate/${adId}/${date}`,{
             headers:{
                 'Content-Type':"application/json"
             },

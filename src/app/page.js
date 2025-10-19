@@ -4,7 +4,7 @@ export default async function   Home () {
   
   const cookieStore = cookies();
   const token = cookieStore.get('token');
-  const res = await fetch(`https://adopte.gotdns.ch/api8/fetch/banner/ads`,{
+  const res = await fetch(`${process.env.AD_SERVICE}/fetch/banner/ads`,{
     headers:{
       'Content-Type':"Application/json",
       Cookie:`token=${token?.value}`

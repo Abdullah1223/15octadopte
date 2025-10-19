@@ -691,7 +691,7 @@ const [availableJobs] = useState([
     const promoteJob = async(data) => {
         if (!selectedJobForPromotion) return;
         setIsLoading(true)
-        const response = await fetch('https://adopte.gotdns.ch/api8/ads/jobs/promotion/creation',{
+        const response = await fetch(`${process.env.AD_SERVICE}/ads/jobs/promotion/creation`,{
           headers:{
             'Content-Type':"application/json"
           },

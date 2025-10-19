@@ -5,7 +5,7 @@ const AdsManagementWrapper = async()=>{
  
    const cookieStore =  cookies();
    const token =   cookieStore.get('token');
-    const response = await fetch('https://adopte.gotdns.ch/api8/Dashboard/fetch/BannerAds',{
+    const response = await fetch(`${process.env.AD_SERVICE}/Dashboard/fetch/BannerAds`,{
         headers:{
             'Content-Type':"application/json",
             Cookie:`token=${token?.value}`
