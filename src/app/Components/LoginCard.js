@@ -1196,11 +1196,7 @@ const LoginCard = () => {
           >
             {translate('forget_password')}
           </button> 
-          <div onClick={()=>{setIsForgetPassword(true)}}>
-          <LogIn
-          
-          className="mt-2" size={20} />
-          </div>
+          <LogIn className="mt-2" size={20} />
         </div>
         
         <div className="self-center text-black cursor-pointer mt-4">
