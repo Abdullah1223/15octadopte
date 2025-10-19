@@ -348,7 +348,7 @@ const LoginCard = () => {
         };
       }
       
-      const response = await fetch('https://adopte.gotdns.ch/api1/SignUp', {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_IDENTIFICATION_SERVICE}/SignUp`, {
         headers: {
           'Content-Type': 'application/json'
         },
@@ -520,7 +520,7 @@ const LoginCard = () => {
     loginData
    }
     try {
-      const response = await fetch('https://adopte.gotdns.ch/api1/login', {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_IDENTIFICATION_SERVICE}/login`, {
         headers: {
           'Content-Type': 'application/json'
         },
@@ -1196,7 +1196,11 @@ const LoginCard = () => {
           >
             {translate('forget_password')}
           </button> 
-          <LogIn className="mt-2" size={20} />
+          <div onClick={()=>{setIsForgetPassword(true)}}>
+          <LogIn
+          
+          className="mt-2" size={20} />
+          </div>
         </div>
         
         <div className="self-center text-black cursor-pointer mt-4">
