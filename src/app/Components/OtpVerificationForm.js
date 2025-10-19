@@ -44,7 +44,7 @@ const OtpVerification = ({
         code,
         email
     }  
-    const response = await fetch('https://adopte.gotdns.ch/api1/otpVerification',{
+    const response = await fetch(`${process.env.NEXT_PUBLIC_IDENTIFICATION_SERVICE}/otpVerification`,{
         headers:{
             'Content-Type':"Application/json"
         },

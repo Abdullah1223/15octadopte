@@ -12,7 +12,7 @@ import { useEffect } from "react";
     try{
 
      
-      const response = await  userInstance.get('https://adopte.gotdns.ch/api1/adsMetricDasboard/fetch',)
+      const response = await  userInstance.get(`https://adoptenew.gotdns.ch/api1/adsMetricDasboard/fetch`,)
     console.log('response',response.data) 
     const result = await response.data
     return{

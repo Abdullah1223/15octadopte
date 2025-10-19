@@ -87,7 +87,7 @@ const ForgotPasswordForm = ({ onSuccess }) => {
     setApiErrors({});
     
     try {
-      const response = await fetch('https://adopte.gotdns.ch/api1/sendResetCode', {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_IDENTIFICATION_SERVICE}/sendResetCode`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -134,7 +134,7 @@ const ForgotPasswordForm = ({ onSuccess }) => {
     setApiErrors({});
     
     try {
-      const response = await fetch('https://adopte.gotdns.ch/api1/verifyForgetPasswordCode', {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_IDENTIFICATION_SERVICE}/verifyForgetPasswordCode`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -184,7 +184,7 @@ const ForgotPasswordForm = ({ onSuccess }) => {
     setApiErrors({});
     
     try {
-      const response = await fetch('https://adopte.gotdns.ch/api1/forgetPassword', {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_IDENTIFICATION_SERVICE}/forgetPassword`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
