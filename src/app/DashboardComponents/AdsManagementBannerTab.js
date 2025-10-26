@@ -149,7 +149,7 @@ const AdsManagementBannerTab = ({
     };
 
     try {
-      const response = await fetch(`${${process.env.AD_SERVICE}}/ads/create/banner`, {
+      const response = await fetch(`${process.env.AD_SERVICE}/ads/create/banner`, {
         headers: {
           'Content-Type': "application/json"
         },
