@@ -2,7 +2,6 @@
 import Image from "next/image"
 import { useInView } from "react-intersection-observer"
 import { useTranslation } from "../Context/TranslationContext.";
-import { routeModule } from "next/dist/build/templates/pages";
 import { useRouter } from "next/navigation";
 
 const OurServicesComponentLg = ()=>{
