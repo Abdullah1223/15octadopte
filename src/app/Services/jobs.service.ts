@@ -2,7 +2,7 @@ import {  Dispatch, SetStateAction } from "react"
 import { JobFetchErrorServer } from "../ErrorMessages/errorMessages"
 import axios, { AxiosError, AxiosResponse } from "axios"
 import { interceptorAssignment } from "../lib/authState"
-const jobUrl = process.env.NEXT_PUBLIC_JOB_SERVICE      
+const jobUrl = process.env.JOB_SERVICE      
 
 export const jobInstance  = axios.create({
   baseURL:jobUrl,
