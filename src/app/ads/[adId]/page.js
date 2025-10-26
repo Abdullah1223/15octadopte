@@ -1,6 +1,6 @@
-import JobError from "@/app/Components/JobError";
-import LoadingSpinner from "@/app/Components/LoadingSpinner";
-import Navbar from "@/app/Components/Navbar";
+// import JobError from "../../Components/JobError";
+// import LoadingSpinner from "@/app/Components/LoadingSpinner";
+// import Navbar from "@/app/Components/Navbar";
 import { Ghost, XCircle } from "lucide-react";
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";

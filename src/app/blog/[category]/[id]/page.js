@@ -16,12 +16,12 @@ import {
   Heart,
   Router
 } from 'lucide-react';
-import Navbar from '@/app/Components/Navbar';
-import NewsletterNew from '@/app/Components/Newsletternew';
-import Footer from '@/app/Components/Footer';
-import BlogPageSearchSectionSm from '@/app/Components/BlogPageSearchSectionSm';
+import Navbar from '../../../Components/Navbar';
+import NewsletterNew from '../../../Components/Newsletternew';
+import Footer from '../../../Components/Footer';
+import BlogPageSearchSectionSm from '../../../Components/BlogPageSearchSectionSm';
 import { useRouter } from 'next/navigation';
-import { useTranslation } from '@/app/Context/TranslationContext.';
+import { useTranslation } from '../../../Context/TranslationContext.';
 
 export default function IndiviualArticle() {
   const [comment, setComment] = useState('');

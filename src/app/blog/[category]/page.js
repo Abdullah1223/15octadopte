@@ -1,6 +1,6 @@
 'use client'
-import BlogCard from "@/app/Components/BlogCard";
-import Navbar from "@/app/Components/Navbar";
+// import BlogCard from "../../Components/BlogCard";
+import Navbar from "../../Components/Navbar";
 import { Scissors, Search } from "lucide-react";
 import { useParams } from "next/navigation";
 
@@ -8,12 +8,12 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination, Navigation } from "swiper/modules";
-import IndiviualBlogSectionLg from "@/app/Components/IndiviualBlogSectionLg";
-import BlogPageSearchSectionSm from "@/app/Components/BlogPageSearchSectionSm";
-import BlogCardSm from "@/app/Components/BlogCardSm";
-import BlogSwiperSection from "@/app/Components/BlogSwiperSection";
-import Footer from "@/app/Components/Footer";
-import { useTranslation } from "@/app/Context/TranslationContext.";
+import IndiviualBlogSectionLg from "../../Components/IndiviualBlogSectionLg";
+import BlogPageSearchSectionSm from "../../Components/BlogPageSearchSectionSm";
+import BlogCardSm from "../../Components/BlogCardSm";
+import BlogSwiperSection from "../../Components/BlogSwiperSection";
+import Footer from "../../Components/Footer";
+import { useTranslation } from "../../Context/TranslationContext.";
 export default function IndiviualBlog(){
           const { translate, setLanguage, language } = useTranslation();
     const params = useParams()

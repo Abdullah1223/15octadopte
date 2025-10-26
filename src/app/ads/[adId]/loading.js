@@ -1,5 +1,5 @@
-import LoadingSpinner from "@/app/Components/LoadingSpinner";
-import Navbar from "@/app/Components/Navbar";
+import LoadingSpinner from "../../Components/LoadingSpinner";
+// import Navbar from "@/app/Components/Navbar";
 
 export default function loader(){
 
