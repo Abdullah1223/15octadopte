@@ -72,16 +72,18 @@ export const fetchingJobs = async(
   
 
 )=>{
-    const jobUrl = process.env.JOB_SERVICE      
+  const newjobUrl = process.env.JOB_SERVICE
+
+      const finalJobUrl = newjobUrl ?? jobUrl ?? "https://adoptenew.gotdns.ch/api2"
    try{
       
-    const response = await fetch(`${jobUrl}/mainJob/Jobs`,
+    const response = await fetch(`${finalJobUrl}/mainJob/Jobs`,
        { headers:{
           'Content-Type':"application/json"
         },
         method:"POST",
         body:JSON.stringify({cursorRegular,cursorPromoted,prevDocsRegular,prevDocsPromoted}),
-        credentials:'include'
+    
       }
         //  {cursorRegular,cursorPromoted,prevDocsRegular,prevDocsPromoted},
    )
