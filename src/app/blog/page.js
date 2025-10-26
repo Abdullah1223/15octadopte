@@ -1,36 +1,4 @@
-// import Image from "next/image";
-// import Navbar from "../Components/Navbar";
-// import { Menu, Scissors, Search } from "lucide-react";
-// import BlogCard from "../Components/BlogCard";
-// import BlogPageSectionLg from "../Components/BlogPageSectionLg";
-// import BlogPageSectionSm from "../Components/BlogPageSectionSm";
-// import BlogPageSearchSectionSm from "../Components/BlogPageSearchSectionSm";
 
-// export default function Blog(){
-//    const MockArray=['Hair Care','Hair Trends','Style Hairs']
-//     return (
-//         <div className="bg-[#EBEBEB] h-screen">
-//            <Navbar></Navbar>
-//            <div className="w-full h-[15rem] md:aspect-[14/4] grid place-items-center bg-cover bg-center" style={{ backgroundImage: "url('/barber1 1.png')" }}>
-//     <div className="bg-black bg-opacity-20 w-full h-full grid place-items-center">
-//         <div className="flex flex-col items-center">
-//             <h1 className="text-white text-lg sm:text-3xl md:text-4xl xl:text-5xl 2xl:text-8xl">Stay Sharp Barbering Trends, Tips &</h1>
-//             <h1 className="text-white  text-lg sm:text-3xl md:text-4xl lg:text-3xl xl:text-5xl mt-3 2xl:text-8xl">Career Insights</h1>
-//         </div>
-//     </div>
-// </div>
-
-//      <BlogPageSectionLg></BlogPageSectionLg>
-     
-//      <BlogPageSearchSectionSm></BlogPageSearchSectionSm>
-//   <BlogPageSectionSm></BlogPageSectionSm>
-
- 
-
-//      <div className="h-44"></div>
-//         </div>
-//     )
-// }
 'use client';
 import Image from "next/image";
 import Navbar from "../Components/Navbar";

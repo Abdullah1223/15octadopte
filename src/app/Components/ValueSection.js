@@ -1,3 +1,4 @@
+'use client';
 import Image from "next/image"
 import { inView, useInView } from "react-intersection-observer"
 import { useTranslation } from "../Context/TranslationContext.";

@@ -1,24 +1,4 @@
 
-// const Serviceboxresuseable = ({title,subheading,Icon})=>{
-
-// return(
-//     <div className="group shadow-lg rounded-lg flex items-center hover:scale-110 hover:bg-[#FA4909] self-start bg-[#F5F1F1] mt-8 flex-col border w-64 h-56 transition-all duration-300">
-//     <Icon
-//       className="mt-6 text-[#ff7300] group-hover:text-black transition-colors duration-300"
-//       size={45}
-//     />
-//     <h1 className="text-black px-4 text-center font-bold text-xl mt-2">{title}</h1>
-//     <h1 className="text-center text-[#817C7C] group-hover:text-white font-bold px-2 mt-2 transition-colors duration-300">
-//       {/* Quickly find qualified hairdressers based on your needs (permanent,
-//       fixed-term, freelance, temporary). */}
-//       {subheading}
-//     </h1>
-//   </div>
-// )
-
-// }
-
-// export default Serviceboxresuseable;
 
 const Serviceboxresuseable = ({title, subheading, Icon}) => {
   return (

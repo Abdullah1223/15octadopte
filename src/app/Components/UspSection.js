@@ -1,4 +1,4 @@
-
+'use client';
 import Image from "next/image";
 import { useTranslation } from "../Context/TranslationContext.";
 
@@ -37,7 +37,9 @@ return (
          return <div key={index} className={` animate-fade-in flex  md:p-4 ${index==3?"lg:ml-[6.3rem]":"lg:ml-24"} md:ml-5 md:gap-3 lg:ml-24 xl:ml-0   items-center xl:p-8 xl:gap-4 `}>
           <Image src={data.image} width={25} height={25}
           sizes="(max-width: 640px) 48px, (max-width: 768px) 64px, (max-width: 1024px) 96px, 128px"
-          alt="Thunder"></Image>
+          alt="Thunder"
+          loading="lazy"
+          ></Image>
           <div className="flex flex-col  ">
             <h1 className="md:text-base  lg:text-lg xl:text-xl font-bold">{data.title}</h1>
             <p className={`lg:text-xs ${language=='fr' && index==1?'text-wrap':'text-nowrap'}  text-xs`} >{data.subheading}</p>

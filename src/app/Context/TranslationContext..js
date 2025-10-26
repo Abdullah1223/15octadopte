@@ -1,15 +1,12 @@
 'use client'
 import React, { createContext, useState, useContext } from "react";
-import translations from '@/app/locales/translation.json' // Import translations
+import translations from '../locales/translation.json' // Import translations
 
-// Create context
 const TranslationContext = createContext();
 
-// Provider component
 export const TranslationProvider = ({ children }) => {
   const [language, setLanguage] = useState("fr");
 
-  // Function to translate text based on the current language
   const translate = (key) => translations[language][key] || key;
 
   return (
@@ -19,5 +16,4 @@ export const TranslationProvider = ({ children }) => {
   );
 };
 
-// Custom hook to use translation
 export const useTranslation = () => useContext(TranslationContext);
