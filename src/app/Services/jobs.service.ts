@@ -2,7 +2,7 @@ import {  Dispatch, SetStateAction } from "react"
 import { JobFetchErrorServer } from "../ErrorMessages/errorMessages"
 import axios, { AxiosError, AxiosResponse } from "axios"
 import { interceptorAssignment } from "../lib/authState"
-const jobUrl = process.env.JOB_SERVICE      
+const jobUrl = process.env.NEXT_PUBLIC_JOB_SERVICE      
 
 export const jobInstance  = axios.create({
   baseURL:jobUrl,
@@ -72,15 +72,19 @@ export const fetchingJobs = async(
   
 
 )=>{
-    const jobUrl = process.env.NEXT_PUBLIC_JOB_SERVICE      
+    const jobUrl = process.env.JOB_SERVICE      
    try{
       
-    const response = await jobInstance.post(`mainJob/Jobs`,
-        // headers:{
-        //   'Content-Type':"application/json"
-        // },
-         {cursorRegular,cursorPromoted,prevDocsRegular,prevDocsPromoted},
-      )
+    const response = await fetch(`${jobUrl}/mainJob/Jobs`,
+       { headers:{
+          'Content-Type':"application/json"
+        },
+        method:"POST",
+        body:JSON.stringify({cursorRegular,cursorPromoted,prevDocsRegular,prevDocsPromoted}),
+        credentials:'include'
+      }
+        //  {cursorRegular,cursorPromoted,prevDocsRegular,prevDocsPromoted},
+   )
         // console.log('jobInstance',jobInstance.request)
     
       //  console.log('fetching jobs response before call) 

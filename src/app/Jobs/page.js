@@ -63,7 +63,7 @@ export default async function JobsPage(){
     const response = await fetchingJobs(null,null,null,null)
     // console.log('fetchib JObs response on call',response)
     if(response.status==200){
-      const result = await response.data
+      const result = await response.json()
       
        jobs = result.jobs;
        propCursorRegular=result.lastCursorRegular
